@@ -58,6 +58,27 @@
             background-color: white;
             color: black !important;
         }
+
+        /* Hero Image Continuous Subtle Floating Animation */
+        @keyframes heroFloat {
+            0%, 100% {
+                transform: translateY(-12px);
+            }
+            50% {
+                transform: translateY(12px);
+            }
+        }
+
+        .hero-float-animation {
+            animation: heroFloat 5s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-float-animation {
+                animation: none !important;
+            }
+        }
     </style>
 </head>
 
@@ -168,9 +189,161 @@
 
         <div class="w-[35%] hidden lg:flex items-center justify-center relative">
             <img src="./assets/heroRight.png" alt="Professional Website Mockup"
-                class="object-cover object-center">
+                class="object-cover object-center hero-float-animation">
         </div>
     </main>
+
+    <!-- Selected Work Section -->
+    <section id="selected-work" class="w-full bg-[#030406] pt-[50px] pb-[70px] px-6 md:px-12 lg:px-[30px] border-t border-white/5">
+        <div class="max-w-[1440px] mx-auto flex flex-col">
+            <!-- Header Block -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-[48px] md:mb-[60px]">
+                <div class="flex flex-col max-w-3xl">
+                    <p class="text-[#79EDFF] font-medium text-[13px] md:text-[14px] tracking-[0.2em] uppercase mb-[16px]">
+                        SELECTED WORK
+                    </p>
+                    <h2 class="text-white text-[38px] md:text-[52px] lg:text-[58px] font-bold leading-[1.15] mb-[18px]">
+                        Built to solve real business problems.
+                    </h2>
+                    <p class="text-[#A0A0A0] text-[18px] md:text-[20px] font-light leading-relaxed">
+                        Explore selected projects where strategy, design and technology come together to create practical digital experiences.
+                    </p>
+                </div>
+                <div class="shrink-0 pt-2 lg:pt-0">
+                    <a href="/work"
+                        class="group inline-flex items-center gap-2 px-6 py-3.5 bg-[#111827] border border-white/10 hover:border-[#22D3EE]/40 text-white rounded-[12px] text-[16px] md:text-[17px] font-medium transition-all duration-300 hover:bg-[#161E2F]">
+                        <span>View Case Studies</span>
+                        <span class="transition-transform duration-200 group-hover:translate-x-1.5">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Hierarchy: 1 Large Featured + 2 Smaller Secondary -->
+            <div class="flex flex-col gap-6 md:gap-8 w-full">
+                <!-- Featured Project: Cake Shop -->
+                <div
+                    class="group relative w-full bg-[#0d1117] border border-white/10 hover:border-[#22D3EE]/30 rounded-[24px] md:rounded-[32px] p-6 md:p-8 lg:p-10 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                    <!-- Visual Mockup Container -->
+                    <div class="w-full lg:w-[60%] overflow-hidden rounded-[16px] md:rounded-[20px] bg-[#111827] border border-white/10 relative">
+                        <!-- Browser Window Chrome -->
+                        <div class="h-9 px-4 bg-[#161E2F]/80 border-b border-white/10 flex items-center justify-between select-none">
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+                            </div>
+                            <span class="text-white/40 text-[11px] font-mono tracking-wider">cakeshop.com</span>
+                            <div class="w-6"></div>
+                        </div>
+                        <div class="relative overflow-hidden aspect-[16/10] md:aspect-[16/9] w-full bg-[#030406]">
+                            <img src="./Assets/Images/cakeshop.jpeg" alt="Cake Shop Website Visual"
+                                class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                                onerror="this.src='https://picsum.photos/seed/cakeshop/1200/800'">
+                        </div>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div class="w-full lg:w-[40%] flex flex-col justify-center">
+                        <p class="text-[#79EDFF] text-[13px] md:text-[14px] font-medium tracking-[0.15em] uppercase mb-2">
+                            Business Website / E-commerce
+                        </p>
+                        <h3 class="text-white text-[30px] md:text-[36px] font-bold mb-3 tracking-tight">
+                            Cake Shop
+                        </h3>
+                        <p class="text-[#A0A0A0] text-[16px] md:text-[18px] font-light leading-relaxed mb-8">
+                            A conversion-focused digital experience designed to help a cake business showcase its products and generate enquiries.
+                        </p>
+                        <div>
+                            <a href="./cakeShop/cakeindex.html"
+                                class="group/btn inline-flex items-center gap-2.5 px-6 h-[48px] md:h-[52px] bg-white text-black text-[15px] md:text-[16px] font-medium rounded-[10px] hover:bg-gray-200 transition-colors duration-200">
+                                <span>View Case Study</span>
+                                <span class="transition-transform duration-200 group-hover/btn:translate-x-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Projects Grid (2 columns on Desktop/Tablet) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
+                    <!-- Secondary Project 1: Café -->
+                    <div
+                        class="group relative w-full bg-[#0d1117] border border-white/10 hover:border-[#22D3EE]/30 rounded-[24px] md:rounded-[28px] p-6 md:p-7 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex flex-col">
+                        <!-- Browser Mockup -->
+                        <div class="w-full overflow-hidden rounded-[14px] md:rounded-[16px] bg-[#111827] border border-white/10 mb-6 relative">
+                            <div class="h-8 px-3.5 bg-[#161E2F]/80 border-b border-white/10 flex items-center justify-between select-none">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                                    <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                                    <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                                </div>
+                                <span class="text-white/40 text-[10px] font-mono tracking-wider">cafeweb.com</span>
+                                <div class="w-4"></div>
+                            </div>
+                            <div class="relative overflow-hidden aspect-[16/10] w-full bg-[#030406]">
+                                <img src="https://picsum.photos/seed/cafeweb/800/500" alt="Café Website Visual"
+                                    class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex flex-col flex-grow">
+                            <p class="text-[#79EDFF] text-[12px] md:text-[13px] font-medium tracking-[0.15em] uppercase mb-1.5">
+                                Hospitality / Website
+                            </p>
+                            <h3 class="text-white text-[24px] md:text-[28px] font-bold mb-5 tracking-tight">
+                                Café
+                            </h3>
+                            <div class="mt-auto pt-2">
+                                <a href="/work"
+                                    class="group/link inline-flex items-center gap-2 text-white text-[15px] font-medium hover:text-[#79EDFF] transition-colors duration-200">
+                                    <span>View Case Study</span>
+                                    <span class="transition-transform duration-200 group-hover/link:translate-x-1">→</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Project 2: Mobile Shop -->
+                    <div
+                        class="group relative w-full bg-[#0d1117] border border-white/10 hover:border-[#22D3EE]/30 rounded-[24px] md:rounded-[28px] p-6 md:p-7 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex flex-col">
+                        <!-- Browser Mockup -->
+                        <div class="w-full overflow-hidden rounded-[14px] md:rounded-[16px] bg-[#111827] border border-white/10 mb-6 relative">
+                            <div class="h-8 px-3.5 bg-[#161E2F]/80 border-b border-white/10 flex items-center justify-between select-none">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                                    <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                                    <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                                </div>
+                                <span class="text-white/40 text-[10px] font-mono tracking-wider">mobileshop.com</span>
+                                <div class="w-4"></div>
+                            </div>
+                            <div class="relative overflow-hidden aspect-[16/10] w-full bg-[#030406]">
+                                <img src="https://picsum.photos/seed/mobileshop/800/500" alt="Mobile Shop Website Visual"
+                                    class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex flex-col flex-grow">
+                            <p class="text-[#79EDFF] text-[12px] md:text-[13px] font-medium tracking-[0.15em] uppercase mb-1.5">
+                                Retail / Business Website
+                            </p>
+                            <h3 class="text-white text-[24px] md:text-[28px] font-bold mb-5 tracking-tight">
+                                Mobile Shop
+                            </h3>
+                            <div class="mt-auto pt-2">
+                                <a href="/work"
+                                    class="group/link inline-flex items-center gap-2 text-white text-[15px] font-medium hover:text-[#79EDFF] transition-colors duration-200">
+                                    <span>View Case Study</span>
+                                    <span class="transition-transform duration-200 group-hover/link:translate-x-1">→</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="pt-0 pb-0 bg-[#030406] w-full">
