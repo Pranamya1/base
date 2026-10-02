@@ -76,42 +76,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Counter Animation
-const counters = document.querySelectorAll('.counter-container');
-const counterOptions = {
-    threshold: 0.5
-};
-
-const counterObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const container = entry.target;
-            const valueDisplay = container.querySelector('.counter-value');
-            const endValue = parseInt(container.getAttribute('data-end'));
-            const duration = 2000;
-            let startTime = null;
-
-            const animate = (timestamp) => {
-                if (!startTime) startTime = timestamp;
-                const progress = timestamp - startTime;
-                const currentCount = Math.min(Math.floor((progress / duration) * endValue), endValue);
-                
-                valueDisplay.textContent = currentCount + (currentCount === endValue ? '+' : '');
-
-                if (progress < duration) {
-                    requestAnimationFrame(animate);
-                }
-            };
-            requestAnimationFrame(animate);
-            observer.unobserve(container);
-        }
-    });
-}, counterOptions);
-
-counters.forEach(counter => {
-    counterObserver.observe(counter);
-});
-
 // Timeline Scroll Animation
 const timelineContainer = document.getElementById('timeline-container');
 const timelineFill = document.getElementById('timeline-fill');
