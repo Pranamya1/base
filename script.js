@@ -120,3 +120,51 @@ const timelineObserver = new IntersectionObserver((entries, observer) => {
 timelineItems.forEach(item => {
     timelineObserver.observe(item);
 });
+
+// Contact Form Interactive Handling
+const serviceOptionBtns = document.querySelectorAll('.service-option-btn');
+const selectedServiceInput = document.getElementById('selected-service-input');
+const contactForm = document.getElementById('contact-form');
+const contactSuccess = document.getElementById('contact-success');
+const contactSuccessText = document.getElementById('contact-success-text');
+const contactResetBtn = document.getElementById('contact-reset-btn');
+
+if (serviceOptionBtns.length && selectedServiceInput) {
+    serviceOptionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            serviceOptionBtns.forEach(b => {
+                b.classList.remove('bg-white', 'text-black', 'border-white');
+                b.classList.add('bg-[#111827]', 'text-white/80', 'border-white/10');
+            });
+            btn.classList.add('bg-white', 'text-black', 'border-white');
+            btn.classList.remove('bg-[#111827]', 'text-white/80', 'border-white/10');
+            selectedServiceInput.value = btn.getAttribute('data-service') || 'Websites';
+        });
+    });
+}
+
+if (contactForm && contactSuccess) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const firstName = document.getElementById('contact-first-name')?.value || '';
+        const emailVal = document.getElementById('contact-email')?.value || '';
+        if (contactSuccessText) {
+            contactSuccessText.textContent = `Thank you${firstName ? ', ' + firstName : ''}! We've received your project details and problem constraints. We will follow up at ${emailVal} within 24 hours.`;
+        }
+        contactForm.classList.add('hidden');
+        contactSuccess.classList.remove('hidden');
+        contactSuccess.classList.add('flex');
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    });
+}
+
+if (contactResetBtn && contactForm && contactSuccess) {
+    contactResetBtn.addEventListener('click', () => {
+        contactForm.reset();
+        contactForm.classList.remove('hidden');
+        contactSuccess.classList.add('hidden');
+        contactSuccess.classList.remove('flex');
+    });
+}
