@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shop Case Study Portals | Kalambe Devs</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030406;
+            color: #FAF6EF;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .font-mono {
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* Subtle luxury gold glow */
+        .gold-glow {
+            box-shadow: 0 0 35px -8px rgba(224, 192, 120, 0.15);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-[#030406] text-[#FAF6EF] flex flex-col justify-between relative selection:bg-[#E0C078]/30 selection:text-white">
+
+    <!-- Subtle Ambient Glow -->
+    <div class="fixed inset-0 pointer-events-none opacity-30 z-0"
+        style="background: radial-gradient(circle at 50% 45%, rgba(224, 192, 120, 0.12) 0%, rgba(3, 4, 6, 0) 70%);">
+    </div>
+
+    <!-- Navbar (Same as main site) -->
+    <nav id="navbar"
+        class="h-20 bg-[#030406] flex items-center justify-between px-[15px] sticky top-0 z-50 border-b border-white/5">
+        <a href="/" id="left-section" class="flex items-center gap-3 md:gap-4">
+            <div id="logo-box"
+                class="w-[50px] h-[50px] bg-[#111827] rounded-lg border border-white/10 flex items-center justify-center">
+                <span class="text-[#22D3EE] text-xl font-bold">KD</span>
+            </div>
+            <div id="name-title-group" class="flex flex-col leading-tight">
+                <h1 class="text-white font-bold text-[14px] tracking-wide uppercase">Kalambe Devs</h1>
+                <p class="text-[#79EDFF] font-light text-[9.5px] sm:text-[11px] md:text-[13px] tracking-wider uppercase whitespace-nowrap">Software Development Studio</p>
+            </div>
+        </a>
+
+        <div id="right-section" class="hidden lg:flex items-center gap-8">
+            <a href="/#work"
+                class="nav-link text-[20px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="work">Work</a>
+            <a href="/#services"
+                class="nav-link text-[20px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="services">Services</a>
+            <a href="/#about-me"
+                class="nav-link text-[20px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="about-me">About</a>
+            <a href="/#contact"
+                class="nav-link text-[20px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="contact">Contact</a>
+            <a href="/coming-soon.html"
+                class="h-[50px] px-6 bg-white text-black text-[20px] font-medium rounded-[12px] flex items-center justify-center hover:bg-gray-200 transition-colors">Start
+                a Project</a>
+        </div>
+
+        <button id="mobile-menu-toggle"
+            class="lg:hidden w-[50px] h-[50px] bg-[#111827] rounded-lg border border-white/10 flex items-center justify-center text-white transition-all duration-300 hover:bg-[#1f2937]"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false">
+            <i data-lucide="menu" id="menu-icon"></i>
+            <i data-lucide="x" id="close-icon" class="hidden"></i>
+        </button>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-nav"
+            class="fixed top-20 left-0 w-full h-[calc(100vh-80px)] bg-[#030406] border-t border-white/5 flex flex-col items-center py-8 lg:hidden shadow-2xl z-50 overflow-y-auto hidden">
+            <div class="flex flex-col items-center w-full px-4">
+                <a href="/#work"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="work">Work</a>
+                <a href="/#services"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="services">Services</a>
+                <a href="/#about-me"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="about-me">About</a>
+                <a href="/#contact"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="contact">Contact</a>
+                <a href="/coming-soon.html"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[56px] bg-white text-black text-[20px] font-medium rounded-[12px] transition-all duration-200 mt-[20px] flex items-center justify-center hover:bg-gray-200">Start
+                    a Project</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Centered Content: 2 Primary Destination Buttons -->
+    <main class="relative z-10 flex-1 flex flex-col items-center justify-center px-[15px] py-16 text-center">
+        <div class="max-w-2xl mx-auto mb-10">
+            <span class="text-[#E0C078] font-mono text-xs uppercase tracking-[0.25em] block mb-3">Maison de Sucre · Pâtisserie Atelier</span>
+            <h1 class="font-serif text-3xl sm:text-5xl text-white font-normal mb-4">
+                Select Your Experience Portal
+            </h1>
+            <p class="text-sm md:text-base text-[#A3988A] font-light leading-relaxed max-w-lg mx-auto">
+                Explore the dual architecture of this digital product: the client-facing haute couture bakery storefront or the private kitchen operations dashboard.
+            </p>
+        </div>
+
+        <!-- Two Primary Buttons / Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
+            <!-- Button 1: Client Storefront (cakeshop.html) -->
+            <a href="./cakeshop.html"
+                class="group p-8 rounded-2xl bg-[#0D0B08] border border-[#E0C078]/25 hover:border-[#E0C078] gold-glow transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between text-left cursor-pointer">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#E0C078]/10 border border-[#E0C078]/30 flex items-center justify-center text-[#E0C078] mb-5 group-hover:bg-[#E0C078] group-hover:text-[#0B0907] transition-all duration-300">
+                        <i data-lucide="cake" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-[11px] font-mono text-[#E0C078] uppercase tracking-wider block mb-1">Portal 01 · Client & Customer</span>
+                    <h2 class="font-serif text-2xl text-white font-medium mb-2 group-hover:text-[#E0C078] transition-colors">
+                        Client Storefront
+                    </h2>
+                    <p class="text-xs text-[#A3988A] font-light leading-relaxed">
+                        Public pâtisserie landing page, signature seasonal gateaux collection, interactive bespoke cake builder, and live order tracking.
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#E0C078] font-medium">
+                    <span>Launch Client Experience</span>
+                    <span class="font-mono text-base transition-transform duration-200 group-hover:translate-x-1.5">→</span>
+                </div>
+            </a>
+
+            <!-- Button 2: Owner Dashboard (cakedashboard.html) -->
+            <a href="./cakedashboard.html"
+                class="group p-8 rounded-2xl bg-[#0D0B08] border border-white/10 hover:border-[#79EDFF] hover:shadow-[0_0_35px_-8px_rgba(121,237,255,0.2)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between text-left cursor-pointer">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#79EDFF] mb-5 group-hover:bg-[#79EDFF] group-hover:text-[#0B0907] transition-all duration-300">
+                        <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-[11px] font-mono text-[#79EDFF] uppercase tracking-wider block mb-1">Portal 02 · Bakery Owner</span>
+                    <h2 class="font-serif text-2xl text-white font-medium mb-2 group-hover:text-[#79EDFF] transition-colors">
+                        Owner Dashboard
+                    </h2>
+                    <p class="text-xs text-[#A3988A] font-light leading-relaxed">
+                        Executive kitchen command center, live production kanban, daily bake prep sheet, luxury ingredient inventory, and financial analytics.
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#79EDFF] font-medium">
+                    <span>Launch Owner Operations</span>
+                    <span class="font-mono text-base transition-transform duration-200 group-hover:translate-x-1.5">→</span>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-20 py-8 px-[15px] text-center text-xs text-[#666666] border-t border-white/5">
+        <p>© 2026 Kalambe Devs · Strategy. Design. Engineering.</p>
+    </footer>
+
+    <!-- Floating Back Button (Bottom Right Corner) -->
+    <a href="/" onclick="goBackHome(event)"
+        id="floating-back-btn"
+        title="Go Back"
+        aria-label="Return to Previous Page"
+        class="fixed bottom-6 right-6 z-[100] w-12 h-12 md:w-14 md:h-14 rounded-full bg-white hover:bg-gray-200 text-black border border-white/20 shadow-[0_4px_25px_rgba(0,0,0,0.5)] backdrop-blur-md flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 md:w-6 md:h-6 pointer-events-none">
+            <path d="m12 19-7-7 7-7"/>
+            <path d="M19 12H5"/>
+        </svg>
+    </a>
+
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+
+        // Mobile Menu Toggle for Navigation
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (mobileMenuToggle && mobileNav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                const isOpen = !mobileNav.classList.contains('hidden');
+                if (isOpen) {
+                    mobileNav.classList.add('hidden');
+                    if (menuIcon) menuIcon.classList.remove('hidden');
+                    if (closeIcon) closeIcon.classList.add('hidden');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                } else {
+                    mobileNav.classList.remove('hidden');
+                    if (menuIcon) menuIcon.classList.add('hidden');
+                    if (closeIcon) closeIcon.classList.remove('hidden');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.add('hidden');
+                    if (menuIcon) menuIcon.classList.remove('hidden');
+                    if (closeIcon) closeIcon.classList.add('hidden');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Close mobile menu on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) {
+                    mobileNav.classList.add('hidden');
+                    if (menuIcon) menuIcon.classList.remove('hidden');
+                    if (closeIcon) closeIcon.classList.add('hidden');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
+        function goBackHome(event) {
+            if (event) event.preventDefault();
+            if (window.history.length > 1 && document.referrer && document.referrer.includes(window.location.host)) {
+                window.history.back();
+            } else {
+                window.location.href = '/';
+            }
+        }
+    </script>
+</body>
+
+</html>
