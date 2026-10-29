@@ -12,39 +12,44 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: "Plus Jakarta Sans", sans-serif;
             background-color: #030406;
-            color: #FAF6EF;
+            color: white;
             min-height: 100vh;
             margin: 0;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        .font-serif {
-            font-family: 'Playfair Display', Georgia, serif;
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
 
-        .font-mono {
-            font-family: 'Space Mono', monospace;
+        ::-webkit-scrollbar-track {
+            background: #030406;
         }
 
-        /* Subtle luxury gold glow */
-        .gold-glow {
-            box-shadow: 0 0 35px -8px rgba(224, 192, 120, 0.15);
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
         }
     </style>
 </head>
 
-<body class="min-h-screen bg-[#030406] text-[#FAF6EF] flex flex-col justify-between relative selection:bg-[#E0C078]/30 selection:text-white">
-
-    <!-- Subtle Ambient Glow -->
-    <div class="fixed inset-0 pointer-events-none opacity-30 z-0"
-        style="background: radial-gradient(circle at 50% 45%, rgba(224, 192, 120, 0.12) 0%, rgba(3, 4, 6, 0) 70%);">
-    </div>
+<body class="min-h-screen flex flex-col">
 
     <!-- Navbar (Same as main site) -->
     <nav id="navbar"
@@ -56,7 +61,7 @@
             </div>
             <div id="name-title-group" class="flex flex-col leading-tight">
                 <h1 class="text-white font-bold text-[14px] tracking-wide uppercase">Kalambe Devs</h1>
-                <p class="text-[#79EDFF] font-light text-[9.5px] sm:text-[11px] md:text-[13px] tracking-wider uppercase whitespace-nowrap">Software Development Studio</p>
+                <p class="text-[#79EDFF] font-light text-[9px] md:text-[13px] tracking-wider uppercase">Software Development Studio</p>
             </div>
         </a>
 
@@ -109,69 +114,100 @@
         </div>
     </nav>
 
-    <!-- Main Centered Content: 2 Primary Destination Buttons -->
-    <main class="relative z-10 flex-1 flex flex-col items-center justify-center px-[15px] py-16 text-center">
-        <div class="max-w-2xl mx-auto mb-10">
-            <span class="text-[#E0C078] font-mono text-xs uppercase tracking-[0.25em] block mb-3">Maison de Sucre · Pâtisserie Atelier</span>
-            <h1 class="font-serif text-3xl sm:text-5xl text-white font-normal mb-4">
-                Select Your Experience Portal
-            </h1>
-            <p class="text-sm md:text-base text-[#A3988A] font-light leading-relaxed max-w-lg mx-auto">
-                Explore the dual architecture of this digital product: the client-facing haute couture bakery storefront or the private kitchen operations dashboard.
-            </p>
-        </div>
-
-        <!-- Two Primary Buttons / Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
-            <!-- Button 1: Client Storefront (cakeshop.html) -->
-            <a href="./cakeshop.html"
-                class="group p-8 rounded-2xl bg-[#0D0B08] border border-[#E0C078]/25 hover:border-[#E0C078] gold-glow transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between text-left cursor-pointer">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-[#E0C078]/10 border border-[#E0C078]/30 flex items-center justify-center text-[#E0C078] mb-5 group-hover:bg-[#E0C078] group-hover:text-[#0B0907] transition-all duration-300">
-                        <i data-lucide="cake" class="w-6 h-6"></i>
-                    </div>
-                    <span class="text-[11px] font-mono text-[#E0C078] uppercase tracking-wider block mb-1">Portal 01 · Client & Customer</span>
-                    <h2 class="font-serif text-2xl text-white font-medium mb-2 group-hover:text-[#E0C078] transition-colors">
-                        Client Storefront
-                    </h2>
-                    <p class="text-xs text-[#A3988A] font-light leading-relaxed">
-                        Public pâtisserie landing page, signature seasonal gateaux collection, interactive bespoke cake builder, and live order tracking.
+    <!-- Portal Selector -->
+    <main class="relative z-10 flex-1">
+        <section class="w-full bg-[#030406] pt-[50px] pb-[70px] px-[15px] border-t border-white/5">
+            <div class="max-w-[1440px] mx-auto flex flex-col">
+                <!-- Header Block -->
+                <div class="flex flex-col max-w-3xl mb-[48px] md:mb-[60px]">
+                    <p class="text-[#79EDFF] font-medium text-[13px] md:text-[14px] tracking-[0.2em] uppercase mb-[16px]">
+                        CAKE SHOP — CASE STUDY
+                    </p>
+                    <h1 class="text-white text-[38px] md:text-[52px] lg:text-[58px] font-bold leading-[1.15] mb-[18px] tracking-tight">
+                        Built for two sides of the business.
+                    </h1>
+                    <p class="text-[#A0A0A0] text-[18px] md:text-[20px] font-light leading-relaxed">
+                        Explore the dual architecture of this digital product: the client-facing haute couture bakery storefront or the private kitchen operations dashboard.
                     </p>
                 </div>
 
-                <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#E0C078] font-medium">
-                    <span>Launch Client Experience</span>
-                    <span class="font-mono text-base transition-transform duration-200 group-hover:translate-x-1.5">→</span>
-                </div>
-            </a>
+                <!-- Two Portal Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
+                    <!-- Portal 01: Client Storefront (cakeshop.html) -->
+                    <a href="./cakeshop.html"
+                        class="group relative w-full bg-[#0d1117] border border-white/10 hover:border-[#22D3EE]/30 rounded-[24px] p-7 md:p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <p class="text-[#79EDFF] text-[12px] md:text-[13px] font-medium tracking-[0.15em] uppercase">
+                                    Portal 01 — Client & Customer
+                                </p>
+                                <div class="w-10 h-10 rounded-[10px] bg-white/5 border border-white/10 flex items-center justify-center text-[#79EDFF] group-hover:border-[#22D3EE]/40 transition-colors duration-200">
+                                    <i data-lucide="cake" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-white text-[24px] md:text-[28px] font-bold mb-5 tracking-tight">
+                                Client Storefront
+                            </h3>
+                            <p class="text-[#A0A0A0] text-[15px] md:text-[16px] font-light leading-relaxed">
+                                Public pâtisserie landing page, signature seasonal gateaux collection, interactive bespoke cake builder, and live order tracking.
+                            </p>
+                        </div>
+                        <div class="mt-auto pt-8">
+                            <span
+                                class="group/btn inline-flex items-center gap-2.5 px-6 h-[48px] md:h-[52px] bg-white text-black text-[15px] md:text-[16px] font-medium rounded-[10px] hover:bg-gray-200 transition-colors duration-200">
+                                <span>Launch Client Experience</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-1"></i>
+                            </span>
+                        </div>
+                    </a>
 
-            <!-- Button 2: Owner Dashboard (cakedashboard.html) -->
-            <a href="./cakedashboard.html"
-                class="group p-8 rounded-2xl bg-[#0D0B08] border border-white/10 hover:border-[#79EDFF] hover:shadow-[0_0_35px_-8px_rgba(121,237,255,0.2)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between text-left cursor-pointer">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#79EDFF] mb-5 group-hover:bg-[#79EDFF] group-hover:text-[#0B0907] transition-all duration-300">
-                        <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
-                    </div>
-                    <span class="text-[11px] font-mono text-[#79EDFF] uppercase tracking-wider block mb-1">Portal 02 · Bakery Owner</span>
-                    <h2 class="font-serif text-2xl text-white font-medium mb-2 group-hover:text-[#79EDFF] transition-colors">
-                        Owner Dashboard
-                    </h2>
-                    <p class="text-xs text-[#A3988A] font-light leading-relaxed">
-                        Executive kitchen command center, live production kanban, daily bake prep sheet, luxury ingredient inventory, and financial analytics.
-                    </p>
+                    <!-- Portal 02: Owner Dashboard (cakedashboard.html) -->
+                    <a href="./cakedashboard.html"
+                        class="group relative w-full bg-[#0d1117] border border-white/10 hover:border-[#22D3EE]/30 rounded-[24px] p-7 md:p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <p class="text-[#79EDFF] text-[12px] md:text-[13px] font-medium tracking-[0.15em] uppercase">
+                                    Portal 02 — Bakery Owner
+                                </p>
+                                <div class="w-10 h-10 rounded-[10px] bg-white/5 border border-white/10 flex items-center justify-center text-[#79EDFF] group-hover:border-[#22D3EE]/40 transition-colors duration-200">
+                                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-white text-[24px] md:text-[28px] font-bold mb-5 tracking-tight">
+                                Owner Dashboard
+                            </h3>
+                            <p class="text-[#A0A0A0] text-[15px] md:text-[16px] font-light leading-relaxed">
+                                Executive kitchen command center, live production kanban, daily bake prep sheet, luxury ingredient inventory, and financial analytics.
+                            </p>
+                        </div>
+                        <div class="mt-auto pt-8">
+                            <span
+                                class="group/btn inline-flex items-center gap-2.5 px-6 h-[48px] md:h-[52px] bg-transparent border border-white/20 text-white text-[15px] md:text-[16px] font-medium rounded-[10px] hover:bg-white hover:text-black hover:border-white transition-all duration-300">
+                                <span>Launch Owner Operations</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-1 text-current"></i>
+                            </span>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#79EDFF] font-medium">
-                    <span>Launch Owner Operations</span>
-                    <span class="font-mono text-base transition-transform duration-200 group-hover:translate-x-1.5">→</span>
-                </div>
-            </a>
-        </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="relative z-20 py-8 px-[15px] text-center text-xs text-[#666666] border-t border-white/5">
-        <p>© 2026 Kalambe Devs · Strategy. Design. Engineering.</p>
+    <!-- Footer (Same as main site) -->
+    <footer class="w-full bg-[#030406] py-[40px] px-[15px] relative z-20">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="w-full h-[1px] bg-[#2F2F2F] mb-[40px]"></div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-[20px]">
+                <div class="text-[#666666] text-[16px] flex items-center gap-2">
+                    <span class="text-[18px]">©</span>
+                    <span>2026 Pranamya Kalambe</span>
+                </div>
+                <div class="flex items-center gap-[24px]">
+                    <a href="#" class="text-[#666666] hover:text-white transition-colors">Instagram</a>
+                    <a href="#" class="text-[#666666] hover:text-white transition-colors">Outlook</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Floating Back Button (Bottom Right Corner) -->
@@ -229,7 +265,7 @@
                 if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) {
                     mobileNav.classList.add('hidden');
                     if (menuIcon) menuIcon.classList.remove('hidden');
-                    if (closeIcon) closeIcon.classList.add('hidden');
+                    if (closeIcon) closeIcon.classList.remove('hidden');
                     mobileMenuToggle.setAttribute('aria-expanded', 'false');
                 }
             });
