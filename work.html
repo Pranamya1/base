@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Work & Case Studies | Kalambe Devs</title>
+    <meta name="description" content="Explore selected digital products, web applications, and case studies engineered by Kalambe Devs to solve real business problems.">
+    <meta property="og:title" content="Work | Kalambe Devs - Software Development Studio">
+    <meta property="og:description" content="Explore selected client work and case studies built around business outcomes.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- connecting style.css -->
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            background-color: #030406;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #030406;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
+        }
+
+        .nav-link-active {
+            background-color: white;
+            color: black !important;
+            padding: 8px 14px;
+            border-radius: 8px;
+        }
+
+        .mobile-nav-active {
+            background-color: white;
+            color: black !important;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="h-20 bg-[#030406] flex items-center justify-between px-4 md:px-8 sticky top-0 z-50 border-b border-white/5">
+        <a href="./index.html" id="left-section" class="flex items-center gap-3 md:gap-4">
+            <div id="logo-box"
+                class="w-[50px] h-[50px] bg-[#111827] rounded-lg border border-white/10 flex items-center justify-center">
+                <span class="text-[#22D3EE] text-xl font-bold">KD</span>
+            </div>
+            <div id="name-title-group" class="flex flex-col leading-tight">
+                <span class="text-white font-bold text-[14px] tracking-wide uppercase">Kalambe Devs</span>
+                <span class="text-[#79EDFF] font-light text-[13px] tracking-wider uppercase">Software Development Studio</span>
+            </div>
+        </a>
+
+        <div id="right-section" class="hidden lg:flex items-center gap-8">
+            <a href="./work.html"
+                class="nav-link nav-link-active text-[18px] font-medium text-white transition-all duration-200"
+                data-id="work">Work</a>
+            <a href="./services.html"
+                class="nav-link text-[18px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="services">Services</a>
+            <a href="./about.html"
+                class="nav-link text-[18px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="about-me">About</a>
+            <a href="./contact.html"
+                class="nav-link text-[18px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="contact">Contact</a>
+            <a href="./contact.html"
+                class="h-[46px] px-6 bg-white text-black text-[16px] font-medium rounded-[10px] flex items-center justify-center hover:bg-gray-200 transition-colors">Start
+                a Project</a>
+        </div>
+
+        <button id="mobile-menu-toggle"
+            class="lg:hidden w-[50px] h-[50px] bg-[#111827] rounded-lg border border-white/10 flex items-center justify-center text-white transition-all duration-300 hover:bg-[#1f2937]">
+            <i data-lucide="menu" id="menu-icon"></i>
+            <i data-lucide="x" id="close-icon" class="hidden"></i>
+        </button>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-nav"
+            class="fixed top-20 left-0 w-full h-[calc(100vh-80px)] bg-[#030406] border-t border-white/5 flex flex-col items-center py-8 lg:hidden shadow-2xl z-50 overflow-y-auto hidden">
+            <div class="flex flex-col items-center w-full px-4">
+                <a href="./work.html"
+                    class="mobile-nav-link mobile-nav-active w-[342px] md:w-[632px] h-[49px] text-[20px] font-medium text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px]"
+                    data-id="work">Work</a>
+                <a href="./services.html"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="services">Services</a>
+                <a href="./about.html"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="about-me">About</a>
+                <a href="./contact.html"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[49px] text-[20px] font-light text-white transition-all duration-200 mt-[10px] flex items-center justify-start pl-[10px] rounded-[12px] hover:bg-white/5"
+                    data-id="contact">Contact</a>
+                <a href="./contact.html"
+                    class="mobile-nav-link w-[342px] md:w-[632px] h-[56px] bg-white text-black text-[20px] font-medium rounded-[12px] transition-all duration-200 mt-[20px] flex items-center justify-center hover:bg-gray-200">Start
+                    a Project</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content: Work Page -->
+    <main class="w-full flex-grow relative overflow-hidden pt-12 pb-20 md:pt-16 md:pb-28 px-4 sm:px-6 md:px-10 lg:px-[30px]">
+        <!-- Ambient Glow Accents -->
+        <div class="absolute top-10 right-0 w-[500px] h-[500px] bg-[#22D3EE]/5 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute bottom-10 left-0 w-[450px] h-[450px] bg-[#79EDFF]/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div class="max-w-[1440px] mx-auto relative z-10">
+            <!-- Header Block -->
+            <div class="max-w-3xl mb-12 md:mb-16">
+                <p class="text-[#79EDFF] font-medium text-[13px] md:text-[14px] tracking-[0.2em] uppercase mb-[16px]">
+                    SELECTED WORK
+                </p>
+                <h1 class="text-white text-[38px] sm:text-[48px] md:text-[56px] lg:text-[62px] font-extrabold leading-[1.1] mb-6 tracking-tight">
+                    Case studies of products built to solve real problems.
+                </h1>
+                <p class="text-[#A0A0A0] text-[18px] sm:text-[20px] font-light leading-relaxed">
+                    A curated archive of business systems, conversion-driven websites, and digital experiences engineered by our studio.
+                </p>
+            </div>
+
+            <!-- Featured Case Study Card: Cake Shop -->
+            <div class="flex flex-col gap-8 w-full mb-16">
+                <div class="group relative w-full bg-[#0d1117] border border-white/10 hover:border-[#22D3EE]/30 rounded-[24px] md:rounded-[32px] p-6 md:p-8 lg:p-10 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                    <div class="w-full lg:w-[60%] overflow-hidden rounded-[16px] md:rounded-[20px] bg-[#111827] border border-white/10 relative">
+                        <div class="h-9 px-4 bg-[#161E2F]/80 border-b border-white/10 flex items-center select-none">
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden aspect-[16/10] md:aspect-[16/9] w-full bg-[#030406]">
+                            <img src="./cakeCaseStudy/images/cake-celebration.jpg" alt="Cake Shop Website Visual"
+                                class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-[40%] flex flex-col justify-center">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111827] border border-white/10 text-[#79EDFF] text-xs font-semibold tracking-wider uppercase mb-3 w-fit">
+                            Featured Case Study
+                        </div>
+                        <h2 class="text-white text-[30px] md:text-[38px] font-bold mb-3 tracking-tight">
+                            Cake Shop Experience
+                        </h2>
+                        <p class="text-[#A0A0A0] text-[16px] md:text-[18px] font-light leading-relaxed mb-6">
+                            A custom ordering experience and management platform designed to turn online visitors into repeat local bakery customers.
+                        </p>
+                        <div>
+                            <a href="./cakeCaseStudy/cakeindex.html"
+                                class="group/btn inline-flex items-center gap-2.5 px-6 h-[50px] bg-white text-black text-[15px] md:text-[16px] font-medium rounded-[10px] hover:bg-gray-200 transition-colors">
+                                <span>Explore Case Study</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coming Soon / In Progress Notice Banner -->
+            <div class="p-8 md:p-12 rounded-[24px] bg-[#0A0D14] border border-white/10 relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#79EDFF]/40 to-transparent"></div>
+                <div class="max-w-xl">
+                    <h3 class="text-white text-2xl font-bold mb-2">More case studies being documented</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        We are currently writing up detailed breakdowns of recent client deliverables in SaaS, health tech, and enterprise automation.
+                    </p>
+                </div>
+                <a href="./contact.html" class="px-6 h-[48px] bg-[#111827] border border-white/20 hover:border-[#79EDFF]/50 text-white text-sm font-medium rounded-[10px] inline-flex items-center gap-2 transition-all shrink-0">
+                    <span>Inquire About Recent Work</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 text-[#79EDFF]"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#030406] py-[40px] px-[30px] border-t border-white/5">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-[20px]">
+                <div class="text-[#666666] text-[15px] flex items-center gap-2">
+                    <span class="text-[17px]">©</span>
+                    <span>2026 Kalambe Devs. All rights reserved.</span>
+                </div>
+                <div class="flex items-center gap-[24px]">
+                    <a href="mailto:kalambedevs@gmail.com" class="text-[#666666] hover:text-[#79EDFF] transition-colors text-sm">kalambedevs@gmail.com</a>
+                    <a href="https://github.com/Pranamya1" target="_blank" rel="noopener noreferrer" class="text-[#666666] hover:text-white transition-colors text-sm">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
