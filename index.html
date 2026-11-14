@@ -872,48 +872,119 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="w-full bg-[#030406] pt-[50px] pb-[70px] lg:pt-[70px] lg:pb-[90px] px-6 md:px-12 lg:px-[30px] border-t border-white/5">
-        <div class="max-w-[1440px] mx-auto flex flex-col">
-            <!-- Header Block -->
-            <div class="flex flex-col w-full">
-                <p class="text-[#79EDFF] font-medium text-[13px] md:text-[14px] tracking-[0.2em] uppercase mb-[16px] max-w-3xl">
-                    GET IN TOUCH
-                </p>
-                <h2 class="text-white text-[38px] md:text-[50px] lg:text-[56px] font-bold leading-[1.15] mb-[18px] tracking-tight max-w-3xl">
-                    Let's connect to discuss your business and problems.
-                </h2>
-                <p class="text-[#A0A0A0] text-[18px] md:text-[20px] font-light leading-relaxed max-w-3xl">
-                    Have a project in mind, an existing product to improve, or need technical guidance? Reach out directly or send us a brief to start a conversation.
-                </p>
-                <!-- Contact Form -->
-                <div class="mt-8 lg:mt-10 w-full max-w-3xl">
-                    <!-- Success Message (Initially Hidden) -->
-                    <div id="contact-success" class="hidden bg-[#0A0D14] border border-[#79EDFF]/30 rounded-[16px] p-8 md:p-10 text-center flex-col items-center">
-                        <div class="w-16 h-16 rounded-full bg-[#79EDFF]/10 border border-[#79EDFF]/30 flex items-center justify-center mb-5 text-[#79EDFF]">
-                            <i data-lucide="check" class="w-8 h-8"></i>
+    <section id="contact" class="w-full bg-[#030406] pt-[60px] pb-[80px] md:pt-[80px] md:pb-[100px] lg:pt-[100px] lg:pb-[120px] px-4 sm:px-6 md:px-10 lg:px-[30px] border-t border-white/5 relative overflow-hidden">
+        <!-- Subtle Background Glow -->
+        <div class="absolute top-1/4 -right-40 w-96 h-96 bg-[#22D3EE]/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 -left-40 w-96 h-96 bg-[#79EDFF]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-[1440px] mx-auto relative z-10">
+            <!-- Two-Column Layout for Desktop / Tablet Grid / Mobile Stack -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12 lg:gap-16 items-start">
+                
+                <!-- Left Column: Context, Direct Reach-out, Response Time & Details -->
+                <div class="flex flex-col lg:col-span-5">
+                    <p class="text-[#79EDFF] font-medium text-[13px] md:text-[14px] tracking-[0.2em] uppercase mb-[16px]">
+                        GET IN TOUCH
+                    </p>
+                    <h2 class="text-white text-[34px] sm:text-[42px] md:text-[48px] lg:text-[54px] font-bold leading-[1.12] mb-[20px] tracking-tight">
+                        Let's build something that actually solves the problem.
+                    </h2>
+                    <p class="text-[#A0A0A0] text-[16px] sm:text-[17px] md:text-[18px] font-light leading-relaxed mb-8 md:mb-10">
+                        Have a new idea, an existing product to revamp, or a complex business challenge? Drop a brief or reach out directly.
+                    </p>
+
+                    <!-- Contact Details & Quick Links Cards -->
+                    <div class="flex flex-col gap-4 mb-8">
+                        <!-- Direct Email Card -->
+                        <a href="mailto:kalambedevs@gmail.com" 
+                            class="group flex items-center gap-4 p-4 rounded-[16px] bg-[#0A0D14] border border-white/10 hover:border-[#79EDFF]/40 transition-all duration-300 hover:-translate-y-0.5">
+                            <div class="w-12 h-12 rounded-[12px] bg-[#111827] border border-white/10 flex items-center justify-center text-[#79EDFF] shrink-0 group-hover:scale-105 transition-transform">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div class="flex flex-col min-w-0">
+                                <span class="text-xs uppercase tracking-wider text-gray-400 font-medium">Direct Email</span>
+                                <span class="text-white text-[15px] sm:text-[16px] font-medium truncate group-hover:text-[#79EDFF] transition-colors">kalambedevs@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- Studio Location / Availability Card -->
+                        <div class="flex items-center gap-4 p-4 rounded-[16px] bg-[#0A0D14] border border-white/10">
+                            <div class="w-12 h-12 rounded-[12px] bg-[#111827] border border-white/10 flex items-center justify-center text-[#79EDFF] shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs uppercase tracking-wider text-gray-400 font-medium">Fast Turnaround</span>
+                                <span class="text-white text-[15px] sm:text-[16px] font-medium">Response within 24 hours guaranteed</span>
+                            </div>
                         </div>
-                        <h3 class="text-white text-2xl font-bold mb-2">Message Sent!</h3>
-                        <p id="contact-success-text" class="text-gray-300 text-[15px] md:text-[16px] leading-relaxed max-w-lg mb-6">
-                            Thank you! We've received your project details and problem constraints. We will follow up with you within 24 hours.
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="pt-6 border-t border-white/10 flex items-center gap-3">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22D3EE] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-[#22D3EE]"></span>
+                        </span>
+                        <p class="text-sm text-gray-300 font-medium">Available for select projects</p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Contact Form -->
+                <div class="w-full lg:col-span-7">
+                    <!-- Success State (Initially Hidden) -->
+                    <div id="contact-success" class="hidden bg-[#0A0D14]/95 backdrop-blur-md border border-[#79EDFF]/30 rounded-[20px] sm:rounded-[24px] p-8 sm:p-12 text-center flex-col items-center shadow-2xl relative">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#79EDFF]/10 border border-[#79EDFF]/30 flex items-center justify-center mb-6 text-[#79EDFF]">
+                            <i data-lucide="check" class="w-8 h-8 sm:w-10 sm:h-10"></i>
+                        </div>
+                        <h3 class="text-white text-2xl sm:text-3xl font-bold mb-3 tracking-tight">Message Received!</h3>
+                        <p id="contact-success-text" class="text-gray-300 text-[15px] sm:text-[16px] leading-relaxed max-w-md mb-8">
+                            Thank you! We've received your project brief. We'll review your requirements and reach out within 24 hours.
                         </p>
                         <button type="button" id="contact-reset-btn"
-                            class="px-6 h-[44px] bg-white text-black text-sm font-semibold rounded-[8px] hover:bg-[#79EDFF] transition-colors cursor-pointer">
+                            class="px-8 h-[48px] bg-white text-black text-sm font-semibold rounded-[10px] hover:bg-[#79EDFF] transition-all cursor-pointer shadow-lg hover:shadow-[#79EDFF]/20">
                             Send Another Message
                         </button>
                     </div>
 
-                    <!-- Contact Form -->
-                    <form id="contact-form" class="bg-[#0A0D14]/90 backdrop-blur-md border border-white/10 rounded-[20px] p-6 sm:p-8 md:p-10 shadow-2xl relative">
-                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#79EDFF]/40 to-transparent"></div>
+                    <!-- Contact Form Card -->
+                    <form id="contact-form" class="bg-[#0A0D14]/90 backdrop-blur-md border border-white/10 rounded-[20px] sm:rounded-[28px] p-5 sm:p-8 md:p-10 shadow-2xl relative">
+                        <!-- Top Accent Line -->
+                        <div class="absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-[#79EDFF]/50 to-transparent"></div>
 
-                        <!-- Name Fields: First Name & Last Name -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                        <!-- Project Type Selector Pills -->
+                        <div class="mb-7">
+                            <label class="block text-gray-300 text-[13px] md:text-[14px] font-medium mb-3">
+                                What are you looking to build? <span class="text-[#79EDFF] font-bold">*</span>
+                            </label>
+                            <input type="hidden" id="selected-service-input" value="Websites">
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                                <button type="button" data-service="Websites"
+                                    class="service-option-btn h-[42px] px-3 rounded-[10px] text-[13px] sm:text-[14px] font-medium bg-white text-black border border-white transition-all duration-200 text-center truncate cursor-pointer">
+                                    Website
+                                </button>
+                                <button type="button" data-service="Web Applications"
+                                    class="service-option-btn h-[42px] px-3 rounded-[10px] text-[13px] sm:text-[14px] font-medium bg-[#111827] text-white/80 border border-white/10 hover:border-white/30 transition-all duration-200 text-center truncate cursor-pointer">
+                                    Web App
+                                </button>
+                                <button type="button" data-service="Mobile Applications"
+                                    class="service-option-btn h-[42px] px-3 rounded-[10px] text-[13px] sm:text-[14px] font-medium bg-[#111827] text-white/80 border border-white/10 hover:border-white/30 transition-all duration-200 text-center truncate cursor-pointer">
+                                    Mobile App
+                                </button>
+                                <button type="button" data-service="Custom Software"
+                                    class="service-option-btn h-[42px] px-3 rounded-[10px] text-[13px] sm:text-[14px] font-medium bg-[#111827] text-white/80 border border-white/10 hover:border-white/30 transition-all duration-200 text-center truncate cursor-pointer">
+                                    Custom System
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Name Fields: First Name & Last Name (Stacks on Mobile, 2 Cols on Tablet & Desktop) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-5">
                             <div>
                                 <label for="contact-first-name" class="block text-gray-300 text-[13px] md:text-[14px] font-medium mb-2">
                                     First Name <span class="text-[#79EDFF] font-bold">*</span>
                                 </label>
                                 <input id="contact-first-name" type="text" required placeholder="John"
-                                    class="w-full bg-[#030406] text-white border border-white/10 rounded-[10px] px-4 py-3.5 text-[15px] placeholder:text-gray-600 focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors">
+                                    class="w-full bg-[#030406] text-white border border-white/10 rounded-[10px] px-4 py-3 sm:py-3.5 text-[15px] placeholder:text-gray-600 focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors">
                             </div>
 
                             <div>
@@ -921,18 +992,18 @@
                                     Last Name <span class="text-[#79EDFF] font-bold">*</span>
                                 </label>
                                 <input id="contact-last-name" type="text" required placeholder="Doe"
-                                    class="w-full bg-[#030406] text-white border border-white/10 rounded-[10px] px-4 py-3.5 text-[15px] placeholder:text-gray-600 focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors">
+                                    class="w-full bg-[#030406] text-white border border-white/10 rounded-[10px] px-4 py-3 sm:py-3.5 text-[15px] placeholder:text-gray-600 focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors">
                             </div>
                         </div>
 
-                        <!-- Contact Fields: Email & Mobile Number with Country Code -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                        <!-- Contact Fields: Email & Phone (Responsive Flex & Dropdown) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-5">
                             <div>
                                 <label for="contact-email" class="block text-gray-300 text-[13px] md:text-[14px] font-medium mb-2">
                                     Email Address <span class="text-[#79EDFF] font-bold">*</span>
                                 </label>
                                 <input id="contact-email" type="email" required placeholder="john@example.com"
-                                    class="w-full bg-[#030406] text-white border border-white/10 rounded-[10px] px-4 py-3.5 text-[15px] placeholder:text-gray-600 focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors">
+                                    class="w-full bg-[#030406] text-white border border-white/10 rounded-[10px] px-4 py-3 sm:py-3.5 text-[15px] placeholder:text-gray-600 focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors">
                             </div>
 
                             <div>
@@ -941,29 +1012,18 @@
                                 </label>
                                 <div class="flex">
                                     <select id="contact-country-code" required
-                                        class="bg-[#030406] text-white border border-white/10 rounded-l-[10px] px-3 py-3.5 text-[14px] focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors cursor-pointer shrink-0 border-r-0">
+                                        class="bg-[#030406] text-white border border-white/10 rounded-l-[10px] px-2.5 sm:px-3 py-3 sm:py-3.5 text-[13px] sm:text-[14px] focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors cursor-pointer shrink-0 border-r-0 max-w-[105px] sm:max-w-[120px]">
                                         <option value="+1" class="bg-[#0b0e14] text-white">US (+1)</option>
+                                        <option value="+91" class="bg-[#0b0e14] text-white" selected>IN (+91)</option>
                                         <option value="+44" class="bg-[#0b0e14] text-white">UK (+44)</option>
                                         <option value="+971" class="bg-[#0b0e14] text-white">UAE (+971)</option>
-                                        <option value="+61" class="bg-[#0b0e14] text-white">Australia (+61)</option>
-                                        <option value="+1-CA" class="bg-[#0b0e14] text-white">Canada (+1)</option>
-                                        <option value="+91" class="bg-[#0b0e14] text-white">India (+91)</option>
-                                        <option value="+49" class="bg-[#0b0e14] text-white">Germany (+49)</option>
-                                        <option value="+33" class="bg-[#0b0e14] text-white">France (+33)</option>
-                                        <option value="+65" class="bg-[#0b0e14] text-white">Singapore (+65)</option>
-                                        <option value="+81" class="bg-[#0b0e14] text-white">Japan (+81)</option>
-                                        <option value="+31" class="bg-[#0b0e14] text-white">Netherlands (+31)</option>
-                                        <option value="+41" class="bg-[#0b0e14] text-white">Switzerland (+41)</option>
-                                        <option value="+353" class="bg-[#0b0e14] text-white">Ireland (+353)</option>
-                                        <option value="+64" class="bg-[#0b0e14] text-white">New Zealand (+64)</option>
-                                        <option value="+966" class="bg-[#0b0e14] text-white">Saudi Arabia (+966)</option>
-                                        <option value="+55" class="bg-[#0b0e14] text-white">Brazil (+55)</option>
-                                        <option value="+27" class="bg-[#0b0e14] text-white">South Africa (+27)</option>
-                                        <option value="+34" class="bg-[#0b0e14] text-white">Spain (+34)</option>
-                                        <option value="+39" class="bg-[#0b0e14] text-white">Italy (+39)</option>
+                                        <option value="+61" class="bg-[#0b0e14] text-white">AU (+61)</option>
+                                        <option value="+1-CA" class="bg-[#0b0e14] text-white">CA (+1)</option>
+                                        <option value="+49" class="bg-[#0b0e14] text-white">DE (+49)</option>
+                                        <option value="+65" class="bg-[#0b0e14] text-white">SG (+65)</option>
                                     </select>
-                                    <input id="contact-mobile" type="tel" required placeholder="555 019 2834"
-                                        class="w-full bg-[#030406] text-white border border-white/10 rounded-r-[10px] px-4 py-3.5 text-[15px] placeholder:text-gray-600 focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors">
+                                    <input id="contact-mobile" type="tel" required placeholder="98765 43210"
+                                        class="w-full bg-[#030406] text-white border border-white/10 rounded-r-[10px] px-3 sm:px-4 py-3 sm:py-3.5 text-[15px] placeholder:text-gray-600 focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors">
                                 </div>
                             </div>
                         </div>
@@ -971,26 +1031,27 @@
                         <!-- Message Field -->
                         <div class="mb-6">
                             <label for="contact-message" class="block text-gray-300 text-[13px] md:text-[14px] font-medium mb-2">
-                                Message <span class="text-[#79EDFF] font-bold">*</span>
+                                Project Brief & Business Goals <span class="text-[#79EDFF] font-bold">*</span>
                             </label>
                             <textarea id="contact-message" rows="4" required
-                                placeholder="Tell us about your business, user goals, and problem constraints..."
-                                class="w-full bg-[#030406] text-white border border-white/10 rounded-[10px] px-4 py-3.5 text-[15px] placeholder:text-gray-600 focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors resize-y"></textarea>
+                                placeholder="Tell us about the project, target audience, timeline, or key problem you want to solve..."
+                                class="w-full bg-[#030406] text-white border border-white/10 rounded-[10px] px-4 py-3 sm:py-3.5 text-[15px] placeholder:text-gray-600 focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors resize-y"></textarea>
                         </div>
 
-                        <!-- Submit Area -->
-                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
+                        <!-- Submit Area: Responsive Stack on Small Screens -->
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2 border-t border-white/5">
                             <p class="text-xs text-gray-400">
-                                All fields marked with <span class="text-[#79EDFF]">*</span> are mandatory.
+                                Required fields marked with <span class="text-[#79EDFF]">*</span>
                             </p>
                             <button type="submit"
-                                class="w-full sm:w-auto px-8 h-[50px] md:h-[52px] bg-white text-black font-semibold text-[15px] rounded-[10px] hover:bg-[#79EDFF] transition-all duration-200 inline-flex items-center justify-center gap-2 cursor-pointer group shadow-[0_4px_20px_rgba(255,255,255,0.1)] hover:shadow-[0_4px_25px_rgba(121,237,255,0.3)]">
-                                <span>Submit</span>
+                                class="w-full sm:w-auto px-8 h-[48px] sm:h-[52px] bg-white text-black font-semibold text-[15px] rounded-[10px] hover:bg-[#79EDFF] transition-all duration-200 inline-flex items-center justify-center gap-2 cursor-pointer group shadow-[0_4px_20px_rgba(255,255,255,0.1)] hover:shadow-[0_4px_25px_rgba(121,237,255,0.3)]">
+                                <span>Send Message</span>
                                 <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"></i>
                             </button>
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
     </section>
