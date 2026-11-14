@@ -220,41 +220,97 @@
 
             <!-- Project Hierarchy: 1 Large Featured + 2 Smaller Secondary -->
             <div class="flex flex-col gap-6 md:gap-8 w-full">
-                <!-- Featured Project: Cake Shop -->
+                <!-- Featured Project: FixoraAI -->
                 <div
                     class="group relative w-full bg-[#0d1117] border border-white/10 hover:border-[#22D3EE]/30 rounded-[24px] md:rounded-[32px] p-6 md:p-8 lg:p-10 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
                     <!-- Visual Mockup Container -->
                     <div class="w-full lg:w-[60%] overflow-hidden rounded-[16px] md:rounded-[20px] bg-[#111827] border border-white/10 relative">
                         <!-- Browser Window Chrome -->
-                        <div class="h-9 px-4 bg-[#161E2F]/80 border-b border-white/10 flex items-center select-none">
+                        <div class="h-9 px-4 bg-[#161E2F]/80 border-b border-white/10 flex items-center justify-between select-none">
                             <div class="flex items-center gap-1.5">
-                                <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
                             </div>
+                            <div class="flex items-center gap-2 text-xs text-gray-400 font-mono bg-[#0d1117] px-3 py-1 rounded-md border border-white/5">
+                                <i data-lucide="lock" class="w-3 h-3 text-[#22D3EE]"></i>
+                                <span>fixoraai.onrender.com</span>
+                            </div>
+                            <div class="w-12"></div>
                         </div>
-                        <div class="relative overflow-hidden aspect-[16/10] md:aspect-[16/9] w-full bg-[#030406]">
-                            <img src="./cakeCaseStudy/images/cake-celebration.jpg" alt="Cake Shop Website Visual"
-                                class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+                        <div class="relative overflow-hidden aspect-[16/10] md:aspect-[16/9] w-full bg-gradient-to-br from-[#0B1528] via-[#080D1A] to-[#030406] p-6 sm:p-8 flex flex-col justify-between">
+                            <!-- In-Mockup Header -->
+                            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-xl bg-[#22D3EE]/10 border border-[#22D3EE]/30 flex items-center justify-center text-[#22D3EE] font-bold text-sm">
+                                        Fx
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-bold text-sm tracking-tight">FixoraAI Studio</p>
+                                        <p class="text-[11px] text-[#79EDFF]">Multimodal Brand Governance</p>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-medium">99.4% Compliant</span>
+                            </div>
+
+                            <!-- In-Mockup Dashboard Preview Cards -->
+                            <div class="grid grid-cols-3 gap-3 my-4">
+                                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
+                                    <span class="text-[10px] text-gray-400 block uppercase">Visual QA</span>
+                                    <span class="text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 mt-1">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                                        Gemini Vision
+                                    </span>
+                                </div>
+                                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
+                                    <span class="text-[10px] text-gray-400 block uppercase">Policy Leaks</span>
+                                    <span class="text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 mt-1 text-emerald-400">
+                                        0 Critical
+                                    </span>
+                                </div>
+                                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
+                                    <span class="text-[10px] text-gray-400 block uppercase">Publishing</span>
+                                    <span class="text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 mt-1">
+                                        1-Click Push
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="p-3 rounded-xl bg-[#111827]/80 border border-white/10 flex items-center justify-between text-xs text-gray-300">
+                                <span class="truncate">Automated guideline ingestion & audit pipeline active</span>
+                                <span class="text-[#79EDFF] font-mono text-[11px] shrink-0 ml-2">Live App</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Project Details -->
                     <div class="w-full lg:w-[40%] flex flex-col justify-center">
-                        <p class="text-[#79EDFF] text-[13px] md:text-[14px] font-medium tracking-[0.15em] uppercase mb-2">
-                            Business Website / E-commerce
-                        </p>
-                        <h3 class="text-white text-[30px] md:text-[36px] font-bold mb-3 tracking-tight">
-                            Cake Shop
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111827] border border-white/10 text-[#79EDFF] text-xs font-semibold tracking-wider uppercase mb-3 w-fit">
+                            AI SaaS Platform
+                        </div>
+                        <h3 class="text-white text-[32px] md:text-[40px] font-bold mb-3 tracking-tight">
+                            FixoraAI
                         </h3>
-                        <p class="text-[#A0A0A0] text-[16px] md:text-[18px] font-light leading-relaxed mb-8">
-                            A conversion-focused digital experience made to generate more revenue and inquiries for an artisanal bakery business.
+                        <p class="text-[#A0A0A0] text-[16px] md:text-[18px] font-light leading-relaxed mb-6">
+                            An automated enterprise brand governance studio powered by multimodal AI to inspect visual creative, enforce policy guidelines, and streamline social distribution.
                         </p>
-                        <div>
-                            <a href="./cakeCaseStudy/cakeindex.html"
-                                class="group/btn inline-flex items-center gap-2.5 px-6 h-[48px] md:h-[52px] bg-white text-black text-[15px] md:text-[16px] font-medium rounded-[10px] hover:bg-gray-200 transition-colors duration-200">
-                                <span>View Case Study</span>
-                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-1"></i>
+
+                        <!-- Key Pillars Tag Badges -->
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300 font-medium">Multimodal Vision</span>
+                            <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300 font-medium">Automated QA</span>
+                            <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300 font-medium">React SPA</span>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-3">
+                            <a href="https://fixoraai.onrender.com/" target="_blank" rel="noopener noreferrer"
+                                class="group/btn inline-flex items-center gap-2.5 px-6 h-[48px] md:h-[52px] bg-white text-black text-[15px] md:text-[16px] font-medium rounded-[10px] hover:bg-[#79EDFF] transition-all duration-200">
+                                <span>Open Live App</span>
+                                <i data-lucide="external-link" class="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-0.5"></i>
+                            </a>
+                            <a href="./contact.html"
+                                class="inline-flex items-center gap-2 px-5 h-[48px] md:h-[52px] bg-[#111827] border border-white/15 hover:border-[#79EDFF]/50 text-white text-[15px] font-medium rounded-[10px] transition-colors">
+                                <span>Inquire Architecture</span>
                             </a>
                         </div>
                     </div>
