@@ -135,9 +135,11 @@ if (serviceOptionBtns.length && selectedServiceInput) {
             serviceOptionBtns.forEach(b => {
                 b.classList.remove('bg-white', 'text-black', 'border-white');
                 b.classList.add('bg-[#111827]', 'text-white/80', 'border-white/10');
+                b.setAttribute('aria-checked', 'false');
             });
             btn.classList.add('bg-white', 'text-black', 'border-white');
             btn.classList.remove('bg-[#111827]', 'text-white/80', 'border-white/10');
+            btn.setAttribute('aria-checked', 'true');
             selectedServiceInput.value = btn.getAttribute('data-service') || 'Websites';
         });
     });

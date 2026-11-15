@@ -99,10 +99,20 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #F472B6;
         }
+
+        /* Accessible Focus Outline */
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 2px solid #F472B6 !important;
+            outline-offset: 2px !important;
+        }
     </style>
 </head>
 
 <body class="bg-white text-slate-700 flex flex-col justify-between relative selection:bg-[#FCE7F3] selection:text-[#BE185D]">
+    <!-- Skip to Content Link -->
+    <a href="#view-landing" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-5 focus:py-2.5 focus:bg-pink-600 focus:text-white focus:font-semibold focus:rounded-xl focus:shadow-2xl focus:outline-none focus:ring-2 focus:ring-pink-300">
+        Skip to content
+    </a>
 
     <!-- Ambient Subtle Diffuse Backdrops: Pure Pale Baby Pink Layers -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -282,6 +292,7 @@
                             <div class="w-full aspect-[4/3] relative overflow-hidden">
                                 <img src="../assets/cakes/pistachio_raspberry.jpg"
                                      alt="Sicilian Bronte Pistachio & Wild Raspberry Entremet"
+                                     loading="lazy" decoding="async"
                                      class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                      onerror="this.src='https://picsum.photos/seed/pistachiocake/800/600'">
                                 <!-- Soft scrim for badge legibility -->
@@ -325,6 +336,7 @@
                             <div class="w-full aspect-[4/3] relative overflow-hidden">
                                 <img src="../assets/cakes/valrhona_chocolate.jpg"
                                      alt="Valrhona Noir Mirror Sculptural Gateau"
+                                     loading="lazy" decoding="async"
                                      class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                      onerror="this.src='https://picsum.photos/seed/chocolatecake/800/600'">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
@@ -367,6 +379,7 @@
                             <div class="w-full aspect-[4/3] relative overflow-hidden">
                                 <img src="../assets/cakes/botanical_lavender.jpg"
                                      alt="Provençal Pressed Botanical Lavender Cake"
+                                     loading="lazy" decoding="async"
                                      class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                      onerror="this.src='https://picsum.photos/seed/botanicalcake/800/600'">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
@@ -410,6 +423,7 @@
                     <div class="md:w-1/2 aspect-[4/3] md:aspect-auto md:min-h-[360px] relative overflow-hidden">
                         <img src="../assets/cakes/strawberry_charlotte.jpg"
                              alt="Royal Strawberry Charlotte — Chef's Seasonal Pick"
+                             loading="lazy" decoding="async"
                              class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                              onerror="this.src='https://picsum.photos/seed/strawberrycake/900/700'">
                         <div class="absolute inset-0 bg-gradient-to-r from-transparent to-white/10 pointer-events-none"></div>
@@ -496,6 +510,7 @@
                 <div class="relative mb-10 rounded-3xl overflow-hidden aspect-[21/8] shadow-2xl group">
                     <img src="../assets/cakes/tasting_box.jpg"
                          alt="Luxury Maison de Sucre Tasting Flight Box"
+                         loading="lazy" decoding="async"
                          class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                          onerror="this.src='https://picsum.photos/seed/tastingbox/1200/450'">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#FFF5F7]/85 via-[#FFF5F7]/20 to-transparent pointer-events-none"></div>

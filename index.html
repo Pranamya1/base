@@ -111,10 +111,20 @@
                 transition: none !important;
             }
         }
+
+        /* Accessible Focus Outline */
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 2px solid #22D3EE !important;
+            outline-offset: 2px !important;
+        }
     </style>
 </head>
 
 <body class="min-h-screen">
+    <!-- Skip to Content Link for Keyboard / Screen Reader Accessibility -->
+    <a href="#home" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-5 focus:py-2.5 focus:bg-white focus:text-black focus:font-semibold focus:rounded-xl focus:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#22D3EE]">
+        Skip to content
+    </a>
 
     <!-- Navbar -->
     <nav id="navbar"
@@ -151,13 +161,16 @@
         <button id="mobile-menu-toggle"
             class="lg:hidden w-[44px] h-[44px] bg-[#0E131F] rounded-xl border border-white/10 flex items-center justify-center text-white transition-all hover:bg-[#1a2030]"
             aria-label="Toggle navigation menu"
-            aria-expanded="false">
+            aria-expanded="false"
+            aria-controls="mobile-nav">
             <i data-lucide="menu" id="menu-icon" class="w-5 h-5"></i>
             <i data-lucide="x" id="close-icon" class="w-5 h-5 hidden"></i>
         </button>
 
         <!-- Mobile Nav Menu -->
         <div id="mobile-nav"
+            role="dialog"
+            aria-label="Mobile Navigation"
             class="fixed top-20 left-0 w-full h-[calc(100vh-80px)] bg-[#030406] border-t border-white/5 flex flex-col items-center py-8 lg:hidden shadow-2xl z-50 overflow-y-auto hidden">
             <div class="flex flex-col items-center w-full px-6 space-y-3">
                 <a href="./pages/work.html"
@@ -258,7 +271,7 @@
 
                         <!-- Visual Surface with Enhanced Contrast Frame -->
                         <div class="relative rounded-[20px] overflow-hidden aspect-[16/10] w-full bg-[#05070A] border border-white/20 mb-6 group-hover:border-[#22D3EE]/50 transition-colors shadow-inner">
-                            <img src="./assets/fixoraaidashboard.png" alt="FixoraAI Brand Governance Dashboard"
+                            <img src="./assets/fixoraaidashboard.png" alt="FixoraAI Brand Governance Dashboard" loading="lazy" decoding="async"
                                 class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#0E131F] via-transparent to-transparent opacity-85"></div>
                             <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs font-mono text-white px-3.5 py-2 rounded-xl bg-[#0E131F]/90 backdrop-blur-md border border-white/20 shadow-lg">
@@ -299,7 +312,7 @@
 
                         <!-- Image Container with Exact Same Aspect Ratio -->
                         <div class="relative rounded-[20px] overflow-hidden aspect-[16/10] w-full bg-[#05070A] border border-white/20 mb-6 group-hover:border-[#22D3EE]/50 transition-colors shadow-inner">
-                            <img src="./cakeCaseStudy/images/cake-celebration.jpg" alt="Artisanal Cake Shop Experience"
+                            <img src="./cakeCaseStudy/images/cake-celebration.jpg" alt="Artisanal Cake Shop Experience" loading="lazy" decoding="async"
                                 class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#0E131F] via-transparent to-transparent opacity-85"></div>
                             <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs font-mono text-white px-3.5 py-2 rounded-xl bg-[#0E131F]/90 backdrop-blur-md border border-white/20 shadow-lg">
@@ -994,24 +1007,24 @@
 
                         <!-- Project Type Selector Pills -->
                         <div class="mb-7">
-                            <label class="block text-gray-300 text-[13px] md:text-[14px] font-medium mb-3">
+                            <label id="project-type-label" class="block text-gray-300 text-[13px] md:text-[14px] font-medium mb-3">
                                 What are you looking to build? <span class="text-[#79EDFF] font-bold">*</span>
                             </label>
                             <input type="hidden" id="selected-service-input" value="Websites">
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                                <button type="button" data-service="Websites"
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" role="radiogroup" aria-labelledby="project-type-label">
+                                <button type="button" data-service="Websites" role="radio" aria-checked="true"
                                     class="service-option-btn h-[42px] px-3 rounded-[10px] text-[13px] sm:text-[14px] font-medium bg-white text-black border border-white transition-all duration-200 text-center truncate cursor-pointer">
                                     Website
                                 </button>
-                                <button type="button" data-service="Web Applications"
+                                <button type="button" data-service="Web Applications" role="radio" aria-checked="false"
                                     class="service-option-btn h-[42px] px-3 rounded-[10px] text-[13px] sm:text-[14px] font-medium bg-[#111827] text-white/80 border border-white/10 hover:border-white/30 transition-all duration-200 text-center truncate cursor-pointer">
                                     Web App
                                 </button>
-                                <button type="button" data-service="Mobile Applications"
+                                <button type="button" data-service="Mobile Applications" role="radio" aria-checked="false"
                                     class="service-option-btn h-[42px] px-3 rounded-[10px] text-[13px] sm:text-[14px] font-medium bg-[#111827] text-white/80 border border-white/10 hover:border-white/30 transition-all duration-200 text-center truncate cursor-pointer">
                                     Mobile App
                                 </button>
-                                <button type="button" data-service="Custom Software"
+                                <button type="button" data-service="Custom Software" role="radio" aria-checked="false"
                                     class="service-option-btn h-[42px] px-3 rounded-[10px] text-[13px] sm:text-[14px] font-medium bg-[#111827] text-white/80 border border-white/10 hover:border-white/30 transition-all duration-200 text-center truncate cursor-pointer">
                                     Custom System
                                 </button>
@@ -1052,7 +1065,7 @@
                                     Mobile Number <span class="text-[#79EDFF] font-bold">*</span>
                                 </label>
                                 <div class="flex">
-                                    <select id="contact-country-code" required
+                                    <select id="contact-country-code" required aria-label="Country Code"
                                         class="bg-[#030406] text-white border border-white/10 rounded-l-[10px] px-2.5 sm:px-3 py-3 sm:py-3.5 text-[13px] sm:text-[14px] focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors cursor-pointer shrink-0 border-r-0 max-w-[105px] sm:max-w-[120px]">
                                         <option value="+1" class="bg-[#0b0e14] text-white">US (+1)</option>
                                         <option value="+91" class="bg-[#0b0e14] text-white" selected>IN (+91)</option>
@@ -1063,7 +1076,7 @@
                                         <option value="+49" class="bg-[#0b0e14] text-white">DE (+49)</option>
                                         <option value="+65" class="bg-[#0b0e14] text-white">SG (+65)</option>
                                     </select>
-                                    <input id="contact-mobile" type="tel" required placeholder="98765 43210"
+                                    <input id="contact-mobile" type="tel" required placeholder="98765 43210" aria-label="Mobile Number"
                                         class="w-full bg-[#030406] text-white border border-white/10 rounded-r-[10px] px-3 sm:px-4 py-3 sm:py-3.5 text-[15px] placeholder:text-gray-600 focus:outline-none focus:border-[#79EDFF] focus:ring-1 focus:ring-[#79EDFF]/40 transition-colors">
                                 </div>
                             </div>

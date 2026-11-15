@@ -41,10 +41,20 @@
         .ambient-glow {
             background: radial-gradient(circle at 50% 30%, rgba(34, 211, 238, 0.12) 0%, rgba(3, 4, 6, 0) 65%);
         }
+
+        /* Accessible Focus Outline */
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 2px solid #22D3EE !important;
+            outline-offset: 2px !important;
+        }
     </style>
 </head>
 
 <body class="min-h-screen flex flex-col justify-between relative selection:bg-[#22D3EE]/30 selection:text-white">
+    <!-- Skip to Content Link -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-5 focus:py-2.5 focus:bg-white focus:text-black focus:font-semibold focus:rounded-xl focus:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#22D3EE]">
+        Skip to content
+    </a>
 
     <!-- Ambient Lighting & Grid Background -->
     <div class="fixed inset-0 grid-bg pointer-events-none opacity-40 z-0"></div>
@@ -71,7 +81,7 @@
     </header>
 
     <!-- Main Content Area -->
-    <main class="relative z-10 flex-grow flex items-center justify-center px-[15px] py-16 md:py-24">
+    <main id="main" class="relative z-10 flex-grow flex items-center justify-center px-[15px] py-16 md:py-24">
         <div class="max-w-[880px] w-full mx-auto flex flex-col items-center text-center">
             
             <!-- Live Status Pill -->

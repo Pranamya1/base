@@ -62,10 +62,20 @@
             background-color: white;
             color: black !important;
         }
+
+        /* Accessible Focus Outline */
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 2px solid #22D3EE !important;
+            outline-offset: 2px !important;
+        }
     </style>
 </head>
 
 <body class="min-h-screen flex flex-col justify-between">
+    <!-- Skip to Content Link -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-5 focus:py-2.5 focus:bg-white focus:text-black focus:font-semibold focus:rounded-xl focus:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#22D3EE]">
+        Skip to content
+    </a>
 
     <!-- Navbar -->
     <nav id="navbar"
@@ -102,13 +112,16 @@
         <button id="mobile-menu-toggle"
             class="lg:hidden w-[44px] h-[44px] bg-[#0E131F] rounded-xl border border-white/10 flex items-center justify-center text-white transition-all hover:bg-[#1a2030]"
             aria-label="Toggle navigation menu"
-            aria-expanded="false">
+            aria-expanded="false"
+            aria-controls="mobile-nav">
             <i data-lucide="menu" id="menu-icon" class="w-5 h-5"></i>
             <i data-lucide="x" id="close-icon" class="w-5 h-5 hidden"></i>
         </button>
 
         <!-- Mobile Nav Menu -->
         <div id="mobile-nav"
+            role="dialog"
+            aria-label="Mobile Navigation"
             class="fixed top-20 left-0 w-full h-[calc(100vh-80px)] bg-[#030406] border-t border-white/5 flex flex-col items-center py-8 lg:hidden shadow-2xl z-50 overflow-y-auto hidden">
             <div class="flex flex-col items-center w-full px-6 space-y-3">
                 <a href="./work.html"
@@ -131,7 +144,7 @@
     </nav>
 
     <!-- Main Content: Services Page -->
-    <main class="w-full flex-grow relative overflow-hidden pt-12 pb-20 md:pt-16 md:pb-28 px-4 sm:px-6 md:px-10 lg:px-[30px]">
+    <main id="main" class="w-full flex-grow relative overflow-hidden pt-12 pb-20 md:pt-16 md:pb-28 px-4 sm:px-6 md:px-10 lg:px-[30px]">
         <!-- Ambient Glow Accents -->
         <div class="absolute top-10 right-0 w-[500px] h-[500px] bg-[#22D3EE]/5 rounded-full blur-[140px] pointer-events-none"></div>
         <div class="absolute bottom-10 left-0 w-[450px] h-[450px] bg-[#79EDFF]/5 rounded-full blur-[140px] pointer-events-none"></div>

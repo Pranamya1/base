@@ -80,10 +80,20 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #93C5FD;
         }
+
+        /* Accessible Focus Outline */
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 2px solid #38BDF8 !important;
+            outline-offset: 2px !important;
+        }
     </style>
 </head>
 
 <body class="bg-[#FAFAF9] text-slate-700 flex flex-col justify-between min-h-screen relative selection:bg-[#FCE7F3] selection:text-[#BE185D]">
+    <!-- Skip to Content Link -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-5 focus:py-2.5 focus:bg-sky-600 focus:text-white focus:font-semibold focus:rounded-xl focus:shadow-2xl focus:outline-none focus:ring-2 focus:ring-sky-300">
+        Skip to content
+    </a>
 
     <!-- Ambient Subtle Diffuse Backdrops: Pale Baby Pink & Baby Blue -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -140,7 +150,7 @@
     <!-- ========================================== -->
     <!-- MAIN DASHBOARD CONTENT                      -->
     <!-- ========================================== -->
-    <main class="relative z-10 flex-1 py-8 px-4 sm:px-6">
+    <main id="main" class="relative z-10 flex-1 py-8 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto space-y-8">
 
             <!-- Header Title Row -->
