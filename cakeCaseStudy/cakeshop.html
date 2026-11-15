@@ -103,7 +103,7 @@
     <!-- MAIN LUXURY STOREFRONT NAVBAR               -->
     <!-- ========================================== -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-[#FCE7F3] shadow-[0_2px_16px_-4px_rgba(251,207,232,0.4)]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
 
             <!-- Brand: icon + name only (no subtitle) -->
             <a href="#" onclick="switchMode('landing'); return false;" class="flex items-center gap-2.5 shrink-0 group">
@@ -113,19 +113,15 @@
                 <span class="font-serif text-xl font-semibold tracking-wide text-slate-900 leading-none">Maison de Sucre</span>
             </a>
 
-            <!-- Centre Nav — 4 clean links, no badges -->
-            <nav class="hidden lg:flex items-center gap-6 text-[13px] font-medium text-slate-500">
+            <!-- Centre Nav — 3 clean links (Kitchen dashboard link removed!) -->
+            <nav class="hidden lg:flex items-center gap-8 text-[13px] font-medium text-slate-500">
                 <a href="#signature" class="hover:text-slate-900 transition-colors">Menu</a>
                 <a href="#process"   class="hover:text-slate-900 transition-colors">Process</a>
                 <a href="#tasting"   class="hover:text-slate-900 transition-colors">Tasting</a>
-                <a href="./cakedashboard.html" class="hover:text-slate-900 transition-colors flex items-center gap-1">
-                    <i data-lucide="layout-dashboard" class="w-3 h-3 text-pink-400"></i>
-                    <span>Kitchen</span>
-                </a>
             </nav>
 
             <!-- Right: icon-only cart + single CTA -->
-            <div class="flex items-center gap-2 shrink-0">
+            <div class="flex items-center gap-2.5 shrink-0">
                 <!-- Icon-only cart with count badge -->
                 <button onclick="toggleCartDrawer(true)"
                     id="nav-cart-btn"
@@ -145,27 +141,7 @@
                     <span class="hidden sm:inline">Customize Cake</span>
                     <span class="sm:hidden">Build</span>
                 </button>
-
-                <!-- Mobile hamburger -->
-                <button class="lg:hidden w-10 h-10 rounded-xl border border-[#FDE8EF] bg-white flex items-center justify-center cursor-pointer hover:bg-[#FFF8FA] transition-all"
-                    onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
-                    <i data-lucide="menu" class="w-4 h-4 text-slate-600"></i>
-                </button>
             </div>
-        </div>
-
-        <!-- Mobile Nav Dropdown -->
-        <div id="mobile-nav" class="hidden lg:hidden border-t border-[#FDE8EF] bg-white px-4 pb-4 pt-2">
-            <nav class="flex flex-col gap-1 text-sm font-medium text-slate-600">
-                <a href="#signature" class="py-2 px-3 rounded-xl hover:bg-[#FFF8FA] hover:text-pink-600 transition-colors" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Signature Menu</a>
-                <a href="#" onclick="switchMode('client'); document.getElementById('mobile-nav').classList.add('hidden'); return false;" class="py-2 px-3 rounded-xl hover:bg-[#FFF8FA] hover:text-pink-600 transition-colors">Custom Cake Atelier · 3D Customizer</a>
-                <a href="#process" class="py-2 px-3 rounded-xl hover:bg-[#FFF5F7] hover:text-pink-600 transition-colors" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Haute Technique</a>
-                <a href="#tasting" class="py-2 px-3 rounded-xl hover:bg-[#FFF5F7] hover:text-pink-600 transition-colors" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Tasting Flights</a>
-                <a href="./cakedashboard.html" class="py-2 px-3 rounded-xl hover:bg-[#FFF5F7] hover:text-pink-600 transition-colors flex items-center gap-1.5">
-                    <i data-lucide="layout-dashboard" class="w-3.5 h-3.5 text-pink-400"></i>
-                    Kitchen Ops ↗
-                </a>
-            </nav>
         </div>
     </header>
 
@@ -916,6 +892,61 @@
     </section>
 
     <!-- ========================================== -->
+    <!-- SLIDE-OVER MOBILE & TABLET NAVIGATION DRAWER -->
+    <!-- ========================================== -->
+    <div id="mobile-nav-overlay" onclick="toggleMobileNav(false)" class="fixed inset-0 bg-slate-900/40 backdrop-blur-xs z-[85] hidden transition-opacity"></div>
+
+    <aside id="mobile-nav-drawer" class="fixed top-0 right-0 bottom-0 w-72 max-w-[85vw] bg-white border-l border-[#FCE7F3] z-[90] shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out">
+        <!-- Drawer Header -->
+        <div class="p-5 border-b border-pink-100 flex items-center justify-between bg-[#FFF5F7]">
+            <div class="flex items-center gap-2">
+                <span class="text-xl">🍰</span>
+                <span class="font-serif text-lg text-slate-900 font-semibold">Maison de Sucre</span>
+            </div>
+            <button onclick="toggleMobileNav(false)" class="p-2 rounded-xl hover:bg-white text-slate-400 hover:text-slate-700 transition-colors cursor-pointer" aria-label="Close menu">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <!-- Drawer Links (No kitchen link) -->
+        <nav class="flex-1 overflow-y-auto p-5 space-y-2 text-sm font-medium text-slate-700">
+            <a href="#signature" onclick="toggleMobileNav(false)" class="flex items-center justify-between p-3 rounded-2xl hover:bg-[#FFF5F7] hover:text-pink-600 transition-colors">
+                <span>Signature Menu</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+            </a>
+            <button onclick="switchMode('client'); toggleMobileNav(false);" class="w-full flex items-center justify-between p-3 rounded-2xl hover:bg-[#FFF5F7] hover:text-pink-600 transition-colors text-left cursor-pointer">
+                <span>Customize Your Cake</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-pink-100 text-pink-700 font-bold">3D Builder</span>
+            </button>
+            <a href="#process" onclick="toggleMobileNav(false)" class="flex items-center justify-between p-3 rounded-2xl hover:bg-[#FFF5F7] hover:text-pink-600 transition-colors">
+                <span>Haute Technique</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+            </a>
+            <a href="#tasting" onclick="toggleMobileNav(false)" class="flex items-center justify-between p-3 rounded-2xl hover:bg-[#FFF5F7] hover:text-pink-600 transition-colors">
+                <span>Tasting Flights</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+            </a>
+            <div class="pt-3 border-t border-pink-100 my-2"></div>
+            <button onclick="toggleMobileNav(false); toggleCartDrawer(true);" class="w-full flex items-center justify-between p-3 rounded-2xl bg-[#FFF8FA] border border-[#FDE8EF] text-pink-600 font-semibold hover:bg-[#FFF0F4] transition-colors cursor-pointer">
+                <span class="flex items-center gap-2">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    <span>Tasting Flight Cart</span>
+                </span>
+                <span id="mobile-nav-cart-count" class="font-mono text-xs px-2 py-0.5 rounded-full bg-pink-500 text-white font-bold">0</span>
+            </button>
+        </nav>
+
+        <!-- Drawer Footer -->
+        <div class="p-5 border-t border-pink-100 bg-[#FFF9FA] text-xs space-y-3">
+            <a href="./cakeindex.html" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl border border-[#FBCFE8] bg-white text-slate-700 font-semibold hover:bg-pink-50 transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4 text-slate-500"></i>
+                <span>Case Study Portal</span>
+            </a>
+            <p class="text-[10px] text-center text-slate-400 font-mono">Kalambe Devs · Case Study</p>
+        </div>
+    </aside>
+
+    <!-- ========================================== -->
     <!-- SLIDE-OVER TASTING FLIGHT CART DRAWER      -->
     <!-- ========================================== -->
     <div id="cart-drawer-overlay" onclick="toggleCartDrawer(false)" class="fixed inset-0 bg-slate-900/30 backdrop-blur-xs z-[70] hidden transition-opacity"></div>
@@ -1194,14 +1225,26 @@
         </div>
     </footer>
 
-    <!-- Floating Back Button (Bottom Right Corner) -->
-    <a href="./cakeindex.html" onclick="goBackHome(event)"
-        id="floating-back-btn"
-        title="Go Back"
-        aria-label="Return to Case Study Portal"
-        class="fixed bottom-6 right-6 z-[100] w-12 h-12 md:w-14 md:h-14 rounded-full bg-white hover:bg-[#FFF1F2] text-slate-800 border border-[#FBCFE8] shadow-xl backdrop-blur-md flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer">
-        <i data-lucide="arrow-left" class="w-5 h-5 md:w-6 md:h-6 pointer-events-none text-slate-700"></i>
-    </a>
+    <!-- Floating Action Stack (Bottom Right Corner) -->
+    <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[80] flex flex-col items-center gap-2.5">
+        <!-- Floating Mobile/Tablet Hamburger Menu Button (Dark background, White icon) -->
+        <button onclick="toggleMobileNav()"
+            id="floating-menu-btn"
+            title="Open Navigation Menu"
+            aria-label="Open Navigation Menu"
+            class="lg:hidden w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-slate-900 hover:bg-black text-white shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer border border-slate-700/80">
+            <i data-lucide="menu" id="floating-menu-icon" class="w-5 h-5 text-white pointer-events-none"></i>
+        </button>
+
+        <!-- Floating Back Button (Contained within frame) -->
+        <a href="./cakeindex.html" onclick="goBackHome(event)"
+            id="floating-back-btn"
+            title="Go Back to Case Study Portal"
+            aria-label="Return to Case Study Portal"
+            class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white hover:bg-[#FFF1F2] text-slate-800 border border-[#FBCFE8] shadow-2xl backdrop-blur-md flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer">
+            <i data-lucide="arrow-left" class="w-5 h-5 text-slate-700 pointer-events-none"></i>
+        </a>
+    </div>
 
     <!-- ========================================== -->
     <!-- INTERACTIVE JAVASCRIPT LOGIC               -->
@@ -1607,11 +1650,14 @@
         let cartItemsCount = 0;
         let cartTotal = 0;
 
-        function toggleCartDrawer(open) {
-            const overlay = document.getElementById('cart-drawer-overlay');
-            const drawer = document.getElementById('cart-drawer');
+        function toggleMobileNav(forceState) {
+            const overlay = document.getElementById('mobile-nav-overlay');
+            const drawer = document.getElementById('mobile-nav-drawer');
             if (!overlay || !drawer) return;
-            if (open) {
+            const isOpen = !drawer.classList.contains('translate-x-full');
+            const shouldOpen = forceState !== undefined ? forceState : !isOpen;
+            if (shouldOpen) {
+                toggleCartDrawer(false);
                 overlay.classList.remove('hidden');
                 drawer.classList.remove('translate-x-full');
             } else {
@@ -1620,15 +1666,35 @@
             }
         }
 
+        function toggleCartDrawer(open) {
+            const overlay = document.getElementById('cart-drawer-overlay');
+            const drawer = document.getElementById('cart-drawer');
+            if (!overlay || !drawer) return;
+            if (open) {
+                toggleMobileNav(false);
+                overlay.classList.remove('hidden');
+                drawer.classList.remove('translate-x-full');
+            } else {
+                overlay.classList.add('hidden');
+                drawer.classList.add('translate-x-full');
+            }
+        }
+
+        function syncCartBadges() {
+            const navCount = document.getElementById('nav-cart-count');
+            const mobileNavCount = document.getElementById('mobile-nav-cart-count');
+            if (navCount) navCount.innerText = cartItemsCount;
+            if (mobileNavCount) mobileNavCount.innerText = cartItemsCount;
+        }
+
         function addToCart(title, price, servings, image) {
             cartItemsCount++;
             cartTotal += price;
 
-            const navCount = document.getElementById('nav-cart-count');
+            syncCartBadges();
             const subtotal = document.getElementById('cart-subtotal');
             const total = document.getElementById('cart-total');
 
-            if (navCount) navCount.innerText = cartItemsCount;
             if (subtotal) subtotal.innerText = `$${cartTotal.toFixed(2)}`;
             if (total) total.innerText = `$${cartTotal.toFixed(2)}`;
 
@@ -1663,11 +1729,10 @@
             btn.closest('.cart-item')?.remove();
             cartItemsCount = Math.max(0, cartItemsCount - 1);
             cartTotal = Math.max(0, cartTotal - price);
-            const navCount = document.getElementById('nav-cart-count');
+            syncCartBadges();
             const subtotal = document.getElementById('cart-subtotal');
             const total = document.getElementById('cart-total');
 
-            if (navCount) navCount.innerText = cartItemsCount;
             if (subtotal) subtotal.innerText = `$${cartTotal.toFixed(2)}`;
             if (total) total.innerText = `$${cartTotal.toFixed(2)}`;
 
@@ -1742,10 +1807,9 @@
             // Clear cart
             cartItemsCount = 0;
             cartTotal = 0;
-            const navCount = document.getElementById('nav-cart-count');
+            syncCartBadges();
             const subtotal = document.getElementById('cart-subtotal');
             const total = document.getElementById('cart-total');
-            if (navCount) navCount.innerText = 0;
             if (subtotal) subtotal.innerText = "$0.00";
             if (total) total.innerText = "$0.00";
 
