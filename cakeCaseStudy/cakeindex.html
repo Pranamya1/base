@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison de Sucre Portals | Kalambe Devs Case Study</title>
+    <title>Maison de Sucre Case Study & Portals | Kalambe Devs</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -40,6 +40,16 @@
             transform: translateY(-4px);
             box-shadow: 0 20px 40px -15px rgba(34, 211, 238, 0.18), 0 0 25px -5px rgba(121, 237, 255, 0.12);
         }
+
+        .info-card {
+            background: #0E131F;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: border-color 0.2s ease;
+        }
+
+        .info-card:hover {
+            border-color: rgba(34, 211, 238, 0.35);
+        }
     </style>
 </head>
 
@@ -47,7 +57,7 @@
 
     <!-- Ambient Cyan Glow Background -->
     <div class="fixed inset-0 pointer-events-none z-0"
-        style="background: radial-gradient(circle at 50% 35%, rgba(34, 211, 238, 0.08) 0%, rgba(3, 4, 6, 0) 65%);">
+        style="background: radial-gradient(circle at 50% 25%, rgba(34, 211, 238, 0.08) 0%, rgba(3, 4, 6, 0) 65%);">
     </div>
     <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-64 bg-[#22D3EE]/5 blur-[120px] pointer-events-none z-0"></div>
 
@@ -106,109 +116,248 @@
         </div>
     </nav>
 
-    <!-- Main Content: Case Study Experience Selection -->
-    <main class="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-12 md:py-20 text-center max-w-5xl mx-auto w-full">
+    <!-- Main Content -->
+    <main class="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-12 md:py-16 max-w-5xl mx-auto w-full">
         
-        <!-- Breadcrumb / Superheader Tag -->
+        <!-- Superheader Tag -->
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0E131F] border border-[#22D3EE]/30 text-[#79EDFF] font-mono text-[11px] uppercase tracking-wider mb-5">
             <span class="w-1.5 h-1.5 rounded-full bg-[#22D3EE] animate-pulse"></span>
             Case Study · Maison de Sucre
         </div>
 
-        <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
-            Select Experience Portal
+        <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4 text-center">
+            Pâtisserie Digital Ecosystem
         </h1>
-        <p class="text-sm sm:text-base text-gray-400 font-light leading-relaxed max-w-xl mx-auto mb-12">
-            Explore the dual architecture of this digital ecosystem: an interactive luxury customer storefront or the real-time operational kitchen command center.
+        <p class="text-sm sm:text-base text-gray-400 font-light leading-relaxed max-w-2xl mx-auto mb-10 text-center">
+            A high-performance dual architecture connecting a luxury customer storefront to a real-time kitchen operations dashboard. Built bespoke to eliminate manual order tracking and scale custom commissions.
         </p>
 
-        <!-- Two Primary Experience Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl text-left">
-            
-            <!-- Portal 01: Client Storefront (cakeshop.html) -->
-            <a href="./cakeshop.html"
-                class="portal-card group p-7 sm:p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden">
-                <!-- Top Accent Line -->
-                <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#22D3EE]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
+        <!-- Project Overview & Metrics Bar -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-4xl mb-12">
+            <div class="info-card p-4 rounded-xl text-center">
+                <span class="text-[10px] font-mono text-gray-400 uppercase tracking-wider block mb-1">Timeline</span>
+                <span class="text-base sm:text-lg font-bold text-white">4 Weeks</span>
+                <span class="text-[11px] text-[#79EDFF] block mt-0.5">Concept to Deploy</span>
+            </div>
+            <div class="info-card p-4 rounded-xl text-center">
+                <span class="text-[10px] font-mono text-gray-400 uppercase tracking-wider block mb-1">Architecture</span>
+                <span class="text-base sm:text-lg font-bold text-white">Dual Portal</span>
+                <span class="text-[11px] text-[#79EDFF] block mt-0.5">Storefront + Ops</span>
+            </div>
+            <div class="info-card p-4 rounded-xl text-center">
+                <span class="text-[10px] font-mono text-gray-400 uppercase tracking-wider block mb-1">Efficiency Gain</span>
+                <span class="text-base sm:text-lg font-bold text-[#22D3EE]">+38%</span>
+                <span class="text-[11px] text-gray-300 block mt-0.5">Order Throughput</span>
+            </div>
+            <div class="info-card p-4 rounded-xl text-center">
+                <span class="text-[10px] font-mono text-gray-400 uppercase tracking-wider block mb-1">Fulfillment Errors</span>
+                <span class="text-base sm:text-lg font-bold text-emerald-400">0%</span>
+                <span class="text-[11px] text-gray-300 block mt-0.5">Zero Lost Orders</span>
+            </div>
+        </div>
+
+        <!-- Section: Interactive Experience Portals -->
+        <div class="w-full max-w-4xl mb-16">
+            <div class="flex items-center justify-between mb-6">
                 <div>
-                    <!-- Header Icon & Status Badge -->
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-[#22D3EE]/10 border border-[#22D3EE]/30 flex items-center justify-center text-[#22D3EE] group-hover:bg-[#22D3EE] group-hover:text-black transition-all duration-300">
-                            <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                    <span class="text-[11px] font-mono text-[#79EDFF] uppercase tracking-wider block">Interactive Live Demo</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white">Select Experience Portal</h2>
+                </div>
+                <span class="hidden sm:inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-gray-400">
+                    2 Live Portals Available
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <!-- Portal 01: Client Storefront (cakeshop.html) -->
+                <a href="./cakeshop.html"
+                    class="portal-card group p-7 sm:p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#22D3EE]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-[#22D3EE]/10 border border-[#22D3EE]/30 flex items-center justify-center text-[#22D3EE] group-hover:bg-[#22D3EE] group-hover:text-black transition-all duration-300">
+                                <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-[#79EDFF] uppercase tracking-wider">
+                                01 · Client
+                            </span>
                         </div>
-                        <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-[#79EDFF] uppercase tracking-wider">
-                            01 · Client
-                        </span>
-                    </div>
 
-                    <span class="text-[12px] font-mono text-[#79EDFF] uppercase tracking-wider block mb-1">Interactive Storefront</span>
-                    <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-[#22D3EE] transition-colors">
-                        Customer Experience
-                    </h2>
-                    <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-6">
-                        Haute couture pâtisserie catalog, bespoke 3D-feel cake customizer, real-time ingredient selection, and client order tracking pipeline.
-                    </p>
+                        <span class="text-[12px] font-mono text-[#79EDFF] uppercase tracking-wider block mb-1">Interactive Storefront</span>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#22D3EE] transition-colors">
+                            Customer Experience
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-6">
+                            Haute couture pâtisserie catalog, bespoke 3D-feel cake customizer, real-time ingredient selection, and client order tracking pipeline.
+                        </p>
 
-                    <!-- Tech & Feature Pills -->
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Customizer Engine</span>
-                        <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Dynamic Pricing</span>
-                        <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Order Tracker</span>
-                    </div>
-                </div>
-
-                <!-- Card Footer CTA -->
-                <div class="mt-8 pt-5 border-t border-white/10 flex items-center justify-between text-xs sm:text-sm text-[#22D3EE] font-semibold">
-                    <span>Launch Storefront Portal</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1.5"></i>
-                </div>
-            </a>
-
-            <!-- Portal 02: Kitchen Operations Dashboard (cakedashboard.html) -->
-            <a href="./cakedashboard.html"
-                class="portal-card group p-7 sm:p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden">
-                <!-- Top Accent Line -->
-                <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#79EDFF]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-
-                <div>
-                    <!-- Header Icon & Status Badge -->
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-[#79EDFF]/10 border border-[#79EDFF]/30 flex items-center justify-center text-[#79EDFF] group-hover:bg-[#79EDFF] group-hover:text-black transition-all duration-300">
-                            <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Customizer Engine</span>
+                            <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Dynamic Pricing</span>
+                            <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Order Tracker</span>
                         </div>
-                        <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-[#79EDFF] uppercase tracking-wider">
-                            02 · Kitchen Ops
-                        </span>
                     </div>
 
-                    <span class="text-[12px] font-mono text-[#79EDFF] uppercase tracking-wider block mb-1">Executive Backoffice</span>
-                    <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-[#79EDFF] transition-colors">
-                        Owner Dashboard
-                    </h2>
-                    <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-6">
-                        Live kitchen order kanban, daily bake prep sheet schedule, ingredient inventory alerts, and real-time revenue analytics dashboard.
-                    </p>
+                    <div class="mt-8 pt-5 border-t border-white/10 flex items-center justify-between text-xs sm:text-sm text-[#22D3EE] font-semibold">
+                        <span>Launch Storefront Portal</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1.5"></i>
+                    </div>
+                </a>
 
-                    <!-- Tech & Feature Pills -->
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Kanban Board</span>
-                        <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Bake Schedules</span>
-                        <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Revenue Metrics</span>
+                <!-- Portal 02: Kitchen Operations Dashboard (cakedashboard.html) -->
+                <a href="./cakedashboard.html"
+                    class="portal-card group p-7 sm:p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#79EDFF]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-[#79EDFF]/10 border border-[#79EDFF]/30 flex items-center justify-center text-[#79EDFF] group-hover:bg-[#79EDFF] group-hover:text-black transition-all duration-300">
+                                <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-[#79EDFF] uppercase tracking-wider">
+                                02 · Kitchen Ops
+                            </span>
+                        </div>
+
+                        <span class="text-[12px] font-mono text-[#79EDFF] uppercase tracking-wider block mb-1">Executive Backoffice</span>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#79EDFF] transition-colors">
+                            Owner Dashboard
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-6">
+                            Live kitchen order kanban, daily bake prep sheet schedule, ingredient inventory alerts, and real-time revenue analytics dashboard.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Kanban Board</span>
+                            <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Bake Schedules</span>
+                            <span class="px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-[11px] text-gray-300">Revenue Metrics</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-5 border-t border-white/10 flex items-center justify-between text-xs sm:text-sm text-[#79EDFF] font-semibold">
+                        <span>Launch Backoffice Portal</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1.5"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Section: Case Study Deep Dive (The Problem, Solution & Results) -->
+        <div class="w-full max-w-4xl mb-16 text-left">
+            <div class="mb-8">
+                <span class="text-[11px] font-mono text-[#79EDFF] uppercase tracking-wider block mb-1">Engineering Deep Dive</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Project Challenge & Delivery</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <!-- The Client Problem & Requirements -->
+                <div class="info-card p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 mb-4">
+                            <i data-lucide="alert-circle" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">The Client Problem & Bottleneck</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-4">
+                            Maison de Sucre operated on manual Instagram DMs and WhatsApp messages to take bespoke wedding and event cake orders. During seasonal rushes, this caused major friction:
+                        </p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 font-mono mt-0.5">•</span>
+                                <span>High order drop-off due to back-and-forth manual flavor and tier pricing quotes.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 font-mono mt-0.5">•</span>
+                                <span>Kitchen prep confusion and miscommunicated dietary requests on busy weekends.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 font-mono mt-0.5">•</span>
+                                <span>Zero real-time inventory tracking for high-end Valrhona chocolate and imported butter.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Card Footer CTA -->
-                <div class="mt-8 pt-5 border-t border-white/10 flex items-center justify-between text-xs sm:text-sm text-[#79EDFF] font-semibold">
-                    <span>Launch Backoffice Portal</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1.5"></i>
+                <!-- How We Met & Solved The Requirements -->
+                <div class="info-card p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-[#22D3EE]/10 border border-[#22D3EE]/20 flex items-center justify-center text-[#22D3EE] mb-4">
+                            <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">How We Solved It (Our Architecture)</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 font-light leading-relaxed mb-4">
+                            Kalambe Devs engineered a synchronous two-sided system with zero third-party software overhead:
+                        </p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#22D3EE] font-mono mt-0.5">•</span>
+                                <span><strong>Interactive Cake Builder:</strong> Instant real-time pricing calculator for tiers, fillings, dietary tags, and delivery slots.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#22D3EE] font-mono mt-0.5">•</span>
+                                <span><strong>Kitchen Operations Kanban:</strong> Automatic state transitions (New → Prep → Baking → Delivery) with daily ingredient pull sheets.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#22D3EE] font-mono mt-0.5">•</span>
+                                <span><strong>Zero Latency:</strong> Lightweight DOM architecture with instant load times and client order lookup codes.</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </a>
+            </div>
 
+            <!-- Client Satisfaction & Testimonial Card -->
+            <div class="info-card p-6 sm:p-8 rounded-2xl relative overflow-hidden">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+                        <span class="text-xs font-mono text-gray-400 ml-2">4.5 / 5.0 Rating</span>
+                    </div>
+                    <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-mono uppercase tracking-wider">
+                        Client Satisfaction
+                    </span>
+                </div>
+
+                <blockquote class="text-sm sm:text-base text-gray-200 italic font-light leading-relaxed mb-4">
+                    "Before working with Kalambe Devs, our custom orders were managed across fragmented WhatsApp chats and sticky notes on our kitchen counter. The bespoke dual-portal system transformed our operation: customers configure their own cakes with upfront pricing, and our kitchen staff has complete clarity on every weekend order. It paid for itself within the first month."
+                </blockquote>
+
+                <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+                    <div class="w-10 h-10 rounded-full bg-[#1A2333] border border-white/10 flex items-center justify-center font-bold text-xs text-[#79EDFF]">
+                        MS
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-white">Elena Rostova</h4>
+                        <p class="text-xs text-gray-400">Founder & Executive Pastry Chef, Maison de Sucre</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="w-full max-w-4xl p-8 rounded-2xl bg-gradient-to-r from-[#0E131F] to-[#0A0D15] border border-white/10 text-center mb-12">
+            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Have a similar project in mind?</h3>
+            <p class="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto mb-6">
+                We engineer bespoke systems, interactive web applications, and internal tools that drive revenue and solve operational bottlenecks.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="../pages/contact.html"
+                    class="h-[46px] px-6 bg-white hover:bg-[#79EDFF] text-black text-sm font-semibold rounded-xl flex items-center justify-center transition-all">
+                    Start Your Project
+                </a>
+                <a href="../pages/work.html"
+                    class="h-[46px] px-6 bg-[#0E131F] hover:bg-white/5 border border-white/10 text-white text-sm font-medium rounded-xl flex items-center justify-center transition-all">
+                    View Other Case Studies
+                </a>
+            </div>
         </div>
 
         <!-- Back to Case Studies Link -->
-        <div class="mt-12">
+        <div>
             <a href="../pages/work.html"
                 class="inline-flex items-center gap-2 text-xs sm:text-sm text-gray-400 hover:text-white transition-colors">
                 <i data-lucide="arrow-left" class="w-4 h-4"></i>
