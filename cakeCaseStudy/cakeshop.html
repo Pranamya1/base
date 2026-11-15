@@ -134,12 +134,11 @@
                     </span>
                 </button>
 
-                <!-- 3D Builder CTA -->
+                <!-- 3D Builder CTA (Desktop & Tablet only, hidden on mobile to avoid overflow) -->
                 <button onclick="switchMode('client')"
-                    class="h-9 px-4 rounded-xl bg-pink-500 hover:bg-pink-600 text-white text-xs font-semibold shadow-md shadow-pink-200/70 hover:shadow-pink-300 transition-all flex items-center gap-1.5 cursor-pointer">
+                    class="hidden sm:flex h-9 px-4 rounded-xl bg-pink-500 hover:bg-pink-600 text-white text-xs font-semibold shadow-md shadow-pink-200/70 hover:shadow-pink-300 transition-all items-center gap-1.5 cursor-pointer">
                     <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-                    <span class="hidden sm:inline">Customize Cake</span>
-                    <span class="sm:hidden">Build</span>
+                    <span>Customize Cake</span>
                 </button>
             </div>
         </div>
@@ -158,7 +157,7 @@
                 <div class="lg:col-span-6 flex flex-col justify-center text-left">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF5F8] border border-[#FDE8EF] shadow-xs text-pink-600 text-xs font-mono uppercase tracking-widest mb-6 w-fit font-medium">
                         <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
-                        Custom Ceremonial Sculptures · Paris · Dubai
+                        Custom Ceremonial Sculptures
                     </div>
 
                     <h1 class="font-serif text-4xl sm:text-6xl lg:text-[68px] font-normal leading-[1.05] tracking-tight text-slate-900 mb-6">
