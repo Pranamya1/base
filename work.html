@@ -141,101 +141,157 @@
                 </p>
             </div>
 
-            <!-- Featured Case Study Card: FixoraAI -->
-            <div class="flex flex-col gap-8 w-full mb-16">
-                <div class="group relative w-full bg-[#0d1117] border border-white/10 hover:border-[#22D3EE]/30 rounded-[24px] md:rounded-[32px] p-6 md:p-8 lg:p-10 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-                    <!-- Visual Mockup Container -->
-                    <div class="w-full lg:w-[60%] overflow-hidden rounded-[16px] md:rounded-[20px] bg-[#111827] border border-white/10 relative">
-                        <!-- Browser Window Chrome -->
-                        <div class="h-9 px-4 bg-[#161E2F]/80 border-b border-white/10 flex items-center justify-between select-none">
-                            <div class="flex items-center gap-1.5">
-                                <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
-                            </div>
-                            <div class="flex items-center gap-2 text-xs text-gray-400 font-mono bg-[#0d1117] px-3 py-1 rounded-md border border-white/5">
-                                <i data-lucide="lock" class="w-3 h-3 text-[#22D3EE]"></i>
-                                <span>fixoraai.onrender.com</span>
-                            </div>
-                            <div class="w-12"></div>
+            <!-- Redesigned Selected Work Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 w-full mb-16">
+                
+                <!-- CARD 1: FixoraAI Flagship (8 Cols Desktop) -->
+                <div class="lg:col-span-8 group relative bg-[#0A0D14] border border-white/10 hover:border-[#22D3EE]/40 rounded-[28px] md:rounded-[32px] p-6 sm:p-8 md:p-10 flex flex-col justify-between transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(0,0,0,0.7)] relative overflow-hidden">
+                    <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#22D3EE]/10 rounded-full blur-3xl pointer-events-none group-hover:bg-[#22D3EE]/20 transition-all duration-700"></div>
+
+                    <!-- Top Meta Bar -->
+                    <div class="flex flex-wrap items-center justify-between gap-3 mb-8 relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span class="text-[#79EDFF] text-xs md:text-sm font-semibold tracking-wider uppercase font-mono">01 / AI SAAS PRODUCT</span>
                         </div>
-                        <div class="relative overflow-hidden aspect-[16/10] md:aspect-[16/9] w-full bg-gradient-to-br from-[#0B1528] via-[#080D1A] to-[#030406] p-6 sm:p-8 flex flex-col justify-between">
-                            <!-- In-Mockup Header -->
-                            <div class="flex items-center justify-between border-b border-white/10 pb-4">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-9 h-9 rounded-xl bg-[#22D3EE]/10 border border-[#22D3EE]/30 flex items-center justify-center text-[#22D3EE] font-bold text-sm">
-                                        Fx
-                                    </div>
-                                    <div>
-                                        <p class="text-white font-bold text-sm tracking-tight">FixoraAI Studio</p>
-                                        <p class="text-[11px] text-[#79EDFF]">Multimodal Brand Governance</p>
-                                    </div>
-                                </div>
-                                <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-medium">99.4% Compliant</span>
-                            </div>
+                        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">
+                            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#22D3EE]"></i>
+                            <span>Multimodal Vision</span>
+                        </div>
+                    </div>
 
-                            <!-- In-Mockup Dashboard Preview Cards -->
-                            <div class="grid grid-cols-3 gap-3 my-4">
-                                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                                    <span class="text-[10px] text-gray-400 block uppercase">Visual QA</span>
-                                    <span class="text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 mt-1">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                                        Gemini Vision
-                                    </span>
+                    <!-- Middle Interactive Visual Surface -->
+                    <div class="relative rounded-[20px] bg-[#030406] border border-white/10 p-5 sm:p-6 mb-8 group-hover:border-white/20 transition-colors">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#111827] to-[#1E293B] border border-white/15 flex items-center justify-center text-[#22D3EE] font-bold text-base shadow-inner">
+                                    Fx
                                 </div>
-                                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                                    <span class="text-[10px] text-gray-400 block uppercase">Policy Leaks</span>
-                                    <span class="text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 mt-1 text-emerald-400">
-                                        0 Critical
-                                    </span>
-                                </div>
-                                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                                    <span class="text-[10px] text-gray-400 block uppercase">Publishing</span>
-                                    <span class="text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 mt-1">
-                                        1-Click Push
-                                    </span>
+                                <div>
+                                    <h4 class="text-white text-base font-bold tracking-tight">FixoraAI</h4>
+                                    <p class="text-xs text-gray-400 font-mono">fixoraai.onrender.com</p>
                                 </div>
                             </div>
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold">
+                                Live In Production
+                            </span>
+                        </div>
 
-                            <div class="p-3 rounded-xl bg-[#111827]/80 border border-white/10 flex items-center justify-between text-xs text-gray-300">
-                                <span class="truncate">Automated guideline ingestion & audit pipeline active</span>
-                                <span class="text-[#79EDFF] font-mono text-[11px] shrink-0 ml-2">Live App</span>
+                        <!-- 3 Real System Metrics -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                                <span class="text-[11px] text-gray-400 block font-medium">Compliance Audit</span>
+                                <span class="text-white text-base font-bold mt-1 block">99.4% Score</span>
+                                <span class="text-[10px] text-emerald-400">Zero policy leaks</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                                <span class="text-[11px] text-gray-400 block font-medium">Visual Inspection</span>
+                                <span class="text-[#79EDFF] text-base font-bold mt-1 block">Gemini Vision</span>
+                                <span class="text-[10px] text-gray-400">Multimodal asset QA</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                                <span class="text-[11px] text-gray-400 block font-medium">Publishing Flow</span>
+                                <span class="text-white text-base font-bold mt-1 block">1-Click Push</span>
+                                <span class="text-[10px] text-gray-400">Multi-channel sync</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project Details -->
-                    <div class="w-full lg:w-[40%] flex flex-col justify-center">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111827] border border-white/10 text-[#79EDFF] text-xs font-semibold tracking-wider uppercase mb-3 w-fit">
-                            Featured Case Study / AI SaaS
+                    <!-- Bottom Details & Actions -->
+                    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 relative z-10">
+                        <div class="max-w-md">
+                            <h3 class="text-white text-[28px] sm:text-[34px] font-bold mb-2 tracking-tight">
+                                Brand Governance AI
+                            </h3>
+                            <p class="text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed">
+                                Complete autonomous governance platform that parses company guidelines, audits creative marketing assets in real time, and automates approved publishing.
+                            </p>
                         </div>
-                        <h2 class="text-white text-[32px] md:text-[40px] font-bold mb-3 tracking-tight">
-                            FixoraAI
-                        </h2>
-                        <p class="text-[#A0A0A0] text-[16px] md:text-[18px] font-light leading-relaxed mb-6">
-                            An automated brand governance studio powered by multimodal AI to inspect visual creative, enforce policy guidelines, and streamline publishing pipelines.
-                        </p>
-
-                        <!-- Key Pillars Tag Badges -->
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300 font-medium">Multimodal Vision</span>
-                            <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300 font-medium">Automated QA</span>
-                            <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300 font-medium">React SPA</span>
-                        </div>
-
-                        <div class="flex flex-wrap items-center gap-3">
+                        <div class="flex items-center gap-3 shrink-0">
                             <a href="https://fixoraai.onrender.com/" target="_blank" rel="noopener noreferrer"
-                                class="group/btn inline-flex items-center gap-2.5 px-6 h-[48px] md:h-[52px] bg-white text-black text-[15px] md:text-[16px] font-medium rounded-[10px] hover:bg-[#79EDFF] transition-all duration-200">
-                                <span>Open Live App</span>
-                                <i data-lucide="external-link" class="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-0.5"></i>
-                            </a>
-                            <a href="./contact.html"
-                                class="inline-flex items-center gap-2 px-5 h-[48px] md:h-[52px] bg-[#111827] border border-white/15 hover:border-[#79EDFF]/50 text-white text-[15px] font-medium rounded-[10px] transition-colors">
-                                <span>Request Similar Solution</span>
+                                class="inline-flex items-center gap-2 px-6 h-[48px] bg-white text-black font-semibold text-sm rounded-[12px] hover:bg-[#79EDFF] transition-all duration-200 shadow-lg shadow-white/5">
+                                <span>Launch App</span>
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
                             </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- CARD 2: Cake Shop Experience (4 Cols Desktop) -->
+                <div class="lg:col-span-4 group relative bg-[#0A0D14] border border-white/10 hover:border-[#22D3EE]/40 rounded-[28px] md:rounded-[32px] p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(0,0,0,0.7)] relative overflow-hidden">
+                    <div>
+                        <!-- Top Meta Bar -->
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-[#79EDFF] text-xs md:text-sm font-semibold tracking-wider uppercase font-mono">02 / E-COMMERCE</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-400 font-mono">Portal & Shop</span>
+                        </div>
+
+                        <!-- Image Container with Luxury Overlay -->
+                        <div class="relative rounded-[20px] overflow-hidden aspect-[4/3] w-full bg-[#030406] border border-white/10 mb-6">
+                            <img src="./cakeCaseStudy/images/cake-celebration.jpg" alt="Artisanal Cake Shop Experience"
+                                class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#030406] via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs font-mono text-white/90 px-3 py-1.5 rounded-lg bg-[#030406]/80 backdrop-blur-md border border-white/10">
+                                <span>Interactive Custom Builder</span>
+                                <span class="text-[#79EDFF]">Live Demo</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-white text-[24px] sm:text-[28px] font-bold mb-2 tracking-tight">
+                            Atelier Cake Shop
+                        </h3>
+                        <p class="text-[#A0A0A0] text-[15px] font-light leading-relaxed mb-6">
+                            Custom visual ordering architecture and management suite built to turn traffic into high-ticket bakery orders.
+                        </p>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="./cakeCaseStudy/cakeindex.html"
+                            class="w-full inline-flex items-center justify-center gap-2 px-5 h-[48px] bg-transparent border border-white/20 text-white font-medium text-sm rounded-[12px] hover:bg-white hover:text-black hover:border-white transition-all duration-300">
+                            <span>Explore Case Study</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 3: Custom Software & Bespoke Systems Banner (12 Cols Desktop) -->
+                <div class="lg:col-span-12 group relative bg-gradient-to-br from-[#0A0D14] via-[#090C12] to-[#030406] border border-white/10 hover:border-[#22D3EE]/30 rounded-[28px] md:rounded-[32px] p-6 sm:p-8 md:p-10 transition-all duration-500 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-[#79EDFF]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 relative z-10">
+                        <div class="max-w-2xl">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-[#79EDFF] text-xs md:text-sm font-semibold tracking-wider uppercase font-mono">03 / BESPOKE ENGINEERING</span>
+                            </div>
+                            <h3 class="text-white text-[26px] sm:text-[32px] font-bold mb-3 tracking-tight">
+                                Have a custom system, dashboard, or SaaS idea?
+                            </h3>
+                            <p class="text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed mb-4">
+                                We engineer end-to-end web apps, internal tooling, and automated workflows from scratch. No rigid templates—everything is shaped around your business model.
+                            </p>
+                            <!-- Stack Badges -->
+                            <div class="flex flex-wrap gap-2 text-xs font-mono text-gray-300">
+                                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10">Full-Stack Web Apps</span>
+                                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10">AI & Vision Pipelines</span>
+                                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10">API Orchestration</span>
+                                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10">Mobile Apps</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+                            <a href="./contact.html"
+                                class="inline-flex items-center justify-center gap-2 px-8 h-[50px] bg-white text-black font-semibold text-sm rounded-[12px] hover:bg-[#79EDFF] transition-all duration-200 shadow-lg shadow-white/5">
+                                <span>Start a Project</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                            <a href="./services.html"
+                                class="inline-flex items-center justify-center gap-2 px-6 h-[50px] bg-[#111827] border border-white/15 hover:border-white/40 text-white font-medium text-sm rounded-[12px] transition-colors">
+                                <span>View Capabilities</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Coming Soon / In Progress Notice Banner -->
