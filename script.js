@@ -44,37 +44,6 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Active Link Highlighting on Scroll
-const sections = document.querySelectorAll('section, main');
-const navLinks = document.querySelectorAll('.nav-link');
-const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollPosition = window.scrollY + 100;
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('nav-link-active');
-        if (link.getAttribute('data-id') === current) {
-            link.classList.add('nav-link-active');
-        }
-    });
-
-    mobileLinks.forEach(link => {
-        link.classList.remove('mobile-nav-active');
-        if (link.getAttribute('data-id') === current) {
-            link.classList.add('mobile-nav-active');
-        }
-    });
-});
 
 // Timeline Scroll Animation
 const timelineContainer = document.getElementById('timeline-container');
@@ -168,5 +137,63 @@ if (contactResetBtn && contactForm && contactSuccess) {
         contactForm.classList.remove('hidden');
         contactSuccess.classList.add('hidden');
         contactSuccess.classList.remove('flex');
+    });
+}
+
+// FAQ Accordion
+const faqCards = document.querySelectorAll('.faq-card');
+if (faqCards.length > 0) {
+    faqCards.forEach(card => {
+        const trigger = card.querySelector('.faq-trigger');
+        const answer = card.querySelector('.faq-answer');
+        const icon = card.querySelector('.faq-icon');
+        const iconWrapper = card.querySelector('.faq-icon-wrapper');
+        const numberBadge = card.querySelector('.faq-number');
+
+        if (trigger && answer) {
+            trigger.addEventListener('click', () => {
+                const isOpen = !answer.classList.contains('hidden');
+
+                // Close all cards
+                faqCards.forEach(c => {
+                    const cAnswer = c.querySelector('.faq-answer');
+                    const cTrigger = c.querySelector('.faq-trigger');
+                    const cIcon = c.querySelector('.faq-icon');
+                    const cIconWrapper = c.querySelector('.faq-icon-wrapper');
+                    const cNumberBadge = c.querySelector('.faq-number');
+
+                    if (cAnswer) cAnswer.classList.add('hidden');
+                    if (cTrigger) cTrigger.setAttribute('aria-expanded', 'false');
+                    if (cIcon) cIcon.style.transform = 'rotate(0deg)';
+                    if (cIconWrapper) {
+                        cIconWrapper.classList.remove('bg-[#22D3EE]', 'text-black', 'border-[#22D3EE]');
+                        cIconWrapper.classList.add('bg-white/5', 'text-[#79EDFF]', 'border-white/10');
+                    }
+                    if (cNumberBadge) {
+                        cNumberBadge.classList.remove('bg-[#22D3EE]/10', 'border-[#22D3EE]/30');
+                        cNumberBadge.classList.add('bg-white/5', 'border-white/10');
+                    }
+                    c.classList.remove('border-[#22D3EE]/40', 'shadow-[0_10px_30px_rgba(34,211,238,0.06)]');
+                    c.classList.add('border-white/10');
+                });
+
+                // Toggle clicked card
+                if (!isOpen) {
+                    answer.classList.remove('hidden');
+                    trigger.setAttribute('aria-expanded', 'true');
+                    if (icon) icon.style.transform = 'rotate(45deg)';
+                    if (iconWrapper) {
+                        iconWrapper.classList.remove('bg-white/5', 'text-[#79EDFF]', 'border-white/10');
+                        iconWrapper.classList.add('bg-[#22D3EE]', 'text-black', 'border-[#22D3EE]');
+                    }
+                    if (numberBadge) {
+                        numberBadge.classList.remove('bg-white/5', 'border-white/10');
+                        numberBadge.classList.add('bg-[#22D3EE]/10', 'border-[#22D3EE]/30');
+                    }
+                    card.classList.remove('border-white/10');
+                    card.classList.add('border-[#22D3EE]/40', 'shadow-[0_10px_30px_rgba(34,211,238,0.06)]');
+                }
+            });
+        }
     });
 }

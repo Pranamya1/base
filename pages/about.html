@@ -231,16 +231,78 @@
     </main>
 
     <!-- Footer -->
-    <footer class="w-full bg-[#030406] py-[40px] px-[30px] border-t border-white/5">
+    <footer class="w-full bg-[#030406] border-t border-white/5 pt-[60px] pb-[40px] px-6 md:px-12 lg:px-[30px]">
         <div class="max-w-[1440px] mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-[20px]">
-                <div class="text-[#666666] text-[15px] flex items-center gap-2">
-                    <span class="text-[17px]">©</span>
-                    <span>2026 Kalambe Devs. All rights reserved.</span>
+            <!-- Top section: brand + columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mb-[50px] md:mb-[60px]">
+                <!-- Brand column (spans 4 on lg) -->
+                <div class="lg:col-span-4 flex flex-col">
+                    <a href="../index.html" class="flex items-center gap-3 mb-[16px] w-fit">
+                        <div class="w-[38px] h-[38px] bg-[#111827] rounded-lg border border-white/10 flex items-center justify-center">
+                            <span class="text-[#22D3EE] text-base font-bold">KD</span>
+                        </div>
+                        <span class="text-white font-bold text-[19px] tracking-tight">Kalambe Devs</span>
+                    </a>
+                    <p class="text-[#888888] text-[14px] leading-relaxed max-w-[320px] mb-4">
+                        An independent software development studio building digital products and technology solutions that solve real business problems.
+                    </p>
+                    <div class="flex items-center gap-2 text-[12px] text-[#666666]">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400/80"></span>
+                        <span>Available for select projects</span>
+                    </div>
                 </div>
-                <div class="flex items-center gap-[24px]">
-                    <a href="mailto:kalambedevs@gmail.com" class="text-[#666666] hover:text-[#79EDFF] transition-colors text-sm">kalambedevs@gmail.com</a>
-                    <a href="https://github.com/Pranamya1" target="_blank" rel="noopener noreferrer" class="text-[#666666] hover:text-white transition-colors text-sm">GitHub</a>
+
+                <!-- 4 Navigation & Resource Columns (spans 8 on lg, 4 on tablet, 2 on mobile) -->
+                <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-6">
+                    <!-- Column 1: Company -->
+                    <div class="flex flex-col">
+                        <h3 class="text-white text-[13px] font-semibold uppercase tracking-widest mb-[20px]">Company</h3>
+                        <ul class="flex flex-col gap-[12px]">
+                            <li><a href="about.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">About Us</a></li>
+                            <li><a href="work.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Our Work</a></li>
+                            <li><a href="contact.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Services -->
+                    <div class="flex flex-col">
+                        <h3 class="text-white text-[13px] font-semibold uppercase tracking-widest mb-[20px]">Services</h3>
+                        <ul class="flex flex-col gap-[12px]">
+                            <li><a href="services.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Web Development</a></li>
+                            <li><a href="services.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Software Development</a></li>
+                            <li><a href="services.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Custom Solutions</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Resources -->
+                    <div class="flex flex-col">
+                        <h3 class="text-white text-[13px] font-semibold uppercase tracking-widest mb-[20px]">Resources</h3>
+                        <ul class="flex flex-col gap-[12px]">
+                            <li><a href="../index.html#faq" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">FAQs</a></li>
+                            <li><a href="terms-and-conditions.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Terms &amp; Conditions</a></li>
+                            <li><a href="privacy-policy.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Connect (In line with Company, Services, Resources) -->
+                    <div class="flex flex-col">
+                        <h3 class="text-white text-[13px] font-semibold uppercase tracking-widest mb-[20px]">Connect</h3>
+                        <ul class="flex flex-col gap-[12px]">
+                            <li><a href="#" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">LinkedIn</a></li>
+                            <li><a href="#" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Instagram</a></li>
+                            <li><a href="mailto:kalambedevs@gmail.com" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Email Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="w-full h-[1px] bg-white/5 mb-[24px]"></div>
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-[14px]">
+                <span class="text-[#555555] text-[13px]">© 2026 Kalambe Devs. All rights reserved.</span>
+                <div class="flex items-center gap-[20px]">
+                    <a href="terms-and-conditions.html" class="text-[#555555] hover:text-[#888888] transition-colors text-[13px]">Terms &amp; Conditions</a>
+                    <a href="privacy-policy.html" class="text-[#555555] hover:text-[#888888] transition-colors text-[13px]">Privacy Policy</a>
                 </div>
             </div>
         </div>

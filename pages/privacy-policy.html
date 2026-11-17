@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Kalambe Devs</title>
+    <meta name="description" content="Privacy Policy for Kalambe Devs. Learn how we collect, use, and protect your personal information when working with our studio.">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://kalambedevs.com/pages/privacy-policy.html">
+    <meta property="og:title" content="Privacy Policy | Kalambe Devs">
+    <meta property="og:description" content="Privacy Policy for Kalambe Devs software development studio.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kalambedevs.com/pages/privacy-policy.html">
+    <meta property="og:image" content="https://kalambedevs.com/assets/heroRight.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy | Kalambe Devs">
+    <meta name="twitter:description" content="Privacy Policy for Kalambe Devs software development studio.">
+    <meta name="twitter:image" content="https://kalambedevs.com/assets/heroRight.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #030406; color: #fff; }
+        :focus-visible { outline: 2px solid #22D3EE; outline-offset: 2px; border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-[#22D3EE]/20 selection:text-[#22D3EE]">
+    <!-- Skip to Content Link -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-5 focus:py-2.5 focus:bg-white focus:text-black focus:font-semibold focus:rounded-xl focus:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#22D3EE]">
+        Skip to content
+    </a>
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="h-20 bg-[#030406] flex items-center justify-between px-4 md:px-8 sticky top-0 z-50 border-b border-white/5">
+        <a href="../index.html" id="left-section" class="flex items-center gap-3 md:gap-4">
+            <div id="logo-box"
+                class="w-[50px] h-[50px] bg-[#111827] rounded-lg border border-white/10 flex items-center justify-center">
+                <span class="text-[#22D3EE] text-xl font-bold">KD</span>
+            </div>
+            <div id="name-title-group" class="flex flex-col leading-tight">
+                <span class="text-white font-bold text-[14px] tracking-wide uppercase">Kalambe Devs</span>
+                <span class="text-[#79EDFF] font-light text-[10px] md:text-[11px] tracking-wider uppercase whitespace-nowrap">Software Development Studio</span>
+            </div>
+        </a>
+
+        <div id="right-section" class="hidden lg:flex items-center gap-8">
+            <a href="./work.html"
+                class="nav-link text-[18px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="work">Work</a>
+            <a href="./services.html"
+                class="nav-link text-[18px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="services">Services</a>
+            <a href="./about.html"
+                class="nav-link text-[18px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="about-me">About</a>
+            <a href="./contact.html"
+                class="nav-link text-[18px] font-light text-white hover:text-[#79EDFF] transition-all duration-200"
+                data-id="contact">Contact</a>
+            <a href="./contact.html"
+                class="h-[46px] px-6 bg-white text-black text-[16px] font-medium rounded-[10px] flex items-center justify-center hover:bg-gray-200 transition-colors">Start
+                a Project</a>
+        </div>
+
+        <button id="mobile-menu-toggle"
+            class="lg:hidden w-[44px] h-[44px] bg-[#0E131F] rounded-xl border border-white/10 flex items-center justify-center text-white transition-all hover:bg-[#1a2030]"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav">
+            <i data-lucide="menu" id="menu-icon" class="w-5 h-5"></i>
+            <i data-lucide="x" id="close-icon" class="w-5 h-5 hidden"></i>
+        </button>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-nav"
+            role="dialog"
+            aria-label="Mobile Navigation"
+            class="fixed top-20 left-0 w-full h-[calc(100vh-80px)] bg-[#030406] border-t border-white/5 flex flex-col items-center py-8 lg:hidden shadow-2xl z-50 overflow-y-auto hidden">
+            <div class="flex flex-col items-center w-full px-6 space-y-3">
+                <a href="./work.html"
+                    class="mobile-nav-link w-full py-3.5 px-4 text-[17px] font-light text-white rounded-xl hover:bg-white/5 flex items-center"
+                    data-id="work">Work</a>
+                <a href="./services.html"
+                    class="mobile-nav-link w-full py-3.5 px-4 text-[17px] font-light text-white rounded-xl hover:bg-white/5 flex items-center"
+                    data-id="services">Services</a>
+                <a href="./about.html"
+                    class="mobile-nav-link w-full py-3.5 px-4 text-[17px] font-light text-white rounded-xl hover:bg-white/5 flex items-center"
+                    data-id="about-me">About</a>
+                <a href="./contact.html"
+                    class="mobile-nav-link w-full py-3.5 px-4 text-[17px] font-light text-white rounded-xl hover:bg-white/5 flex items-center"
+                    data-id="contact">Contact</a>
+                <a href="./contact.html"
+                    class="mobile-nav-link w-full h-[50px] bg-white text-black text-[16px] font-semibold rounded-xl mt-4 flex items-center justify-center hover:bg-[#79EDFF]">Start
+                    a Project</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main" class="w-full flex-grow relative overflow-hidden pt-12 pb-20 md:pt-16 md:pb-28 px-4 sm:px-6 md:px-10 lg:px-[30px]">
+        <!-- Ambient Glow Accents -->
+        <div class="absolute top-10 right-0 w-[500px] h-[500px] bg-[#22D3EE]/5 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute bottom-10 left-0 w-[450px] h-[450px] bg-[#79EDFF]/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div class="max-w-[1440px] mx-auto relative z-10">
+            <!-- Header Block -->
+            <div class="max-w-3xl mb-12 md:mb-16">
+                <p class="text-[#79EDFF] font-medium text-[13px] md:text-[14px] tracking-[0.2em] uppercase mb-[16px] flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-[#22D3EE]"></span>
+                    LEGAL &amp; COMPLIANCE
+                </p>
+                <h1 class="text-white text-[38px] sm:text-[48px] md:text-[56px] lg:text-[62px] font-extrabold leading-[1.1] mb-6 tracking-tight">
+                    Privacy Policy
+                </h1>
+                <p class="text-[#A0A0A0] text-[18px] sm:text-[20px] font-light leading-relaxed mb-6">
+                    How Kalambe Devs handles, protects, and respects personal data when you visit our website, submit project inquiries, or engage our engineering services.
+                </p>
+
+                <!-- Document Meta Chips -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <div class="bg-[#0d1117] border border-white/10 px-3.5 py-1.5 rounded-full flex items-center gap-2 text-xs text-[#A0A0A0]">
+                        <span class="text-white font-medium">Effective Date:</span>
+                        <span class="text-[#22D3EE] font-mono">[PUBLICATION DATE]</span>
+                    </div>
+                    <div class="bg-[#0d1117] border border-white/10 px-3.5 py-1.5 rounded-full flex items-center gap-2 text-xs text-[#A0A0A0]">
+                        <span class="text-white font-medium">Version:</span>
+                        <span class="text-[#79EDFF] font-mono">1.0 (Launch Draft)</span>
+                    </div>
+                    <div class="bg-[#0d1117] border border-white/10 px-3.5 py-1.5 rounded-full flex items-center gap-2 text-xs text-[#A0A0A0]">
+                        <span class="text-white font-medium">Data Sale Policy:</span>
+                        <span class="text-emerald-400 font-medium">Zero Sale of Data</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Two-Column Layout: Left Sticky Navigation / Summary + Right Cards Stack -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+
+                <!-- Left Sticky Sidebar (4 cols on lg) -->
+                <div class="lg:col-span-4 lg:sticky lg:top-28 flex flex-col gap-6 order-2 lg:order-1">
+                    
+                    <!-- Table of Contents -->
+                    <div class="bg-[#0d1117] border border-white/10 rounded-[24px] p-6">
+                        <h3 class="text-white text-[14px] font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
+                            <i data-lucide="list" class="w-4 h-4 text-[#22D3EE]"></i>
+                            <span>Table of Contents</span>
+                        </h3>
+                        <nav class="flex flex-col gap-1.5 text-[14px]">
+                            <a href="#section-1" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">01</span> Introduction
+                            </a>
+                            <a href="#section-2" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">02</span> Information We Collect
+                            </a>
+                            <a href="#section-3" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">03</span> How We Use Information
+                            </a>
+                            <a href="#section-4" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">04</span> Legal Basis &amp; Consent
+                            </a>
+                            <a href="#section-5" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">05</span> Cookies &amp; Tracking
+                            </a>
+                            <a href="#section-6" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">06</span> Third-Party Services
+                            </a>
+                            <a href="#section-7" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">07</span> Storage &amp; Security
+                            </a>
+                            <a href="#section-8" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">08</span> Data Retention
+                            </a>
+                            <a href="#section-9" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">09</span> International Transfers
+                            </a>
+                            <a href="#section-10" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">10</span> Your Privacy Rights
+                            </a>
+                            <a href="#section-11" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">11</span> Children's Privacy
+                            </a>
+                            <a href="#section-12" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">12</span> Policy Updates
+                            </a>
+                            <a href="#section-13" class="text-[#888888] hover:text-[#79EDFF] hover:translate-x-1 transition-all py-1 flex items-center gap-2">
+                                <span class="font-mono text-xs text-[#555555]">13</span> Privacy Contact
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Summary Card -->
+                    <div class="bg-[#0d1117] border border-white/10 rounded-[24px] p-6 relative overflow-hidden">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="w-2 h-2 rounded-full bg-[#22D3EE]"></span>
+                            <span class="text-xs uppercase font-semibold tracking-wider text-[#79EDFF]">At A Glance</span>
+                        </div>
+                        <h4 class="text-white text-base font-semibold mb-3">Key Commitments</h4>
+                        <ul class="flex flex-col gap-2.5 text-[13px] text-[#A0A0A0]">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-[#22D3EE] shrink-0 mt-0.5"></i>
+                                <span>We never sell or monetise personal data.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-[#22D3EE] shrink-0 mt-0.5"></i>
+                                <span>No payment card data is stored on our servers.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-[#22D3EE] shrink-0 mt-0.5"></i>
+                                <span>Full rights to request access, correction, or deletion.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Direct Privacy Inquiries Card -->
+                    <div class="bg-[#0d1117] border border-white/10 rounded-[24px] p-6">
+                        <h4 class="text-white text-base font-semibold mb-2">Have a question?</h4>
+                        <p class="text-[#A0A0A0] text-[13px] mb-4">
+                            Contact our privacy desk regarding data requests or information handling.
+                        </p>
+                        <a href="mailto:kalambedevs@gmail.com" class="inline-flex items-center gap-2 text-[14px] text-[#22D3EE] hover:underline font-medium">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            <span>kalambedevs@gmail.com</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Right Stack: Polished Glass Document Cards (8 cols on lg) -->
+                <div class="lg:col-span-8 flex flex-col gap-6 order-1 lg:order-2">
+
+                    <!-- Section 1 -->
+                    <div id="section-1" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">01</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">Introduction</h2>
+                        </div>
+                        <div class="space-y-4 text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed">
+                            <p>
+                                Kalambe Devs respects your privacy and is committed to handling personal information responsibly. This Privacy Policy explains what information may be collected when you visit our website, contact us, or engage our software development services, how it may be used, and how it is protected.
+                            </p>
+                            <p>
+                                By accessing our website, submitting an inquiry, or communicating with us, you acknowledge this policy. If you have questions regarding our data practices, reach out via the contact information provided at the bottom of this document.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div id="section-2" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">02</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">Information We May Collect</h2>
+                        </div>
+                        <p class="text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed mb-6">
+                            Depending on how you interact with us, we may collect information across three categories:
+                        </p>
+
+                        <div class="space-y-5">
+                            <!-- Category A -->
+                            <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5">
+                                <h3 class="text-white text-base font-semibold mb-3 flex items-center gap-2">
+                                    <span class="text-[#22D3EE] font-mono text-sm">A.</span>
+                                    <span>Information you provide directly</span>
+                                </h3>
+                                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[14px] text-[#A0A0A0]">
+                                    <li class="flex items-center gap-2"><span class="text-[#22D3EE] font-bold">—</span>Full name</li>
+                                    <li class="flex items-center gap-2"><span class="text-[#22D3EE] font-bold">—</span>Email address</li>
+                                    <li class="flex items-center gap-2"><span class="text-[#22D3EE] font-bold">—</span>Phone number (if supplied)</li>
+                                    <li class="flex items-center gap-2"><span class="text-[#22D3EE] font-bold">—</span>Company or brand name</li>
+                                    <li class="flex items-center gap-2"><span class="text-[#22D3EE] font-bold">—</span>Project requirements &amp; budget</li>
+                                    <li class="flex items-center gap-2"><span class="text-[#22D3EE] font-bold">—</span>Onboarding credentials &amp; assets</li>
+                                </ul>
+                            </div>
+
+                            <!-- Category B -->
+                            <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5">
+                                <h3 class="text-white text-base font-semibold mb-3 flex items-center gap-2">
+                                    <span class="text-[#22D3EE] font-mono text-sm">B.</span>
+                                    <span>Technical information</span>
+                                </h3>
+                                <p class="text-[14px] text-[#A0A0A0] leading-relaxed mb-3">
+                                    When you visit our website, hosting or security services may process technical telemetry including:
+                                </p>
+                                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[14px] text-[#A0A0A0]">
+                                    <li class="flex items-center gap-2"><span class="text-[#22D3EE] font-bold">—</span>IP address</li>
+                                    <li class="flex items-center gap-2"><span class="text-[#22D3EE] font-bold">—</span>Browser type &amp; operating system</li>
+                                    <li class="flex items-center gap-2"><span class="text-[#22D3EE] font-bold">—</span>Device model &amp; screen dimensions</li>
+                                    <li class="flex items-center gap-2"><span class="text-[#22D3EE] font-bold">—</span>Access timestamps &amp; referring URLs</li>
+                                </ul>
+                            </div>
+
+                            <!-- Category C -->
+                            <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5">
+                                <h3 class="text-white text-base font-semibold mb-2 flex items-center gap-2">
+                                    <span class="text-[#22D3EE] font-mono text-sm">C.</span>
+                                    <span>Payment information</span>
+                                </h3>
+                                <p class="text-[14px] text-[#A0A0A0] leading-relaxed">
+                                    If you engage our services, authorized payment providers process financial transactions. <strong class="text-white font-medium">Kalambe Devs does not collect or store full payment-card numbers or sensitive cardholder data on its own servers.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div id="section-3" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">03</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">How We Use Information</h2>
+                        </div>
+                        <p class="text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed mb-4">
+                            Information collected is utilized exclusively for legitimate business purposes:
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[14px] text-[#A0A0A0] mb-6">
+                            <li class="flex items-start gap-2.5"><span class="text-[#22D3EE] font-bold mt-0.5">—</span>Responding to inquiries and project requests</li>
+                            <li class="flex items-start gap-2.5"><span class="text-[#22D3EE] font-bold mt-0.5">—</span>Preparing detailed proposals and technical quotes</li>
+                            <li class="flex items-start gap-2.5"><span class="text-[#22D3EE] font-bold mt-0.5">—</span>Executing contracted engineering milestones</li>
+                            <li class="flex items-start gap-2.5"><span class="text-[#22D3EE] font-bold mt-0.5">—</span>Processing milestone invoices via secured gateways</li>
+                            <li class="flex items-start gap-2.5"><span class="text-[#22D3EE] font-bold mt-0.5">—</span>Preventing fraudulent submissions and abuse</li>
+                            <li class="flex items-start gap-2.5"><span class="text-[#22D3EE] font-bold mt-0.5">—</span>Complying with applicable accounting &amp; legal mandates</li>
+                        </ul>
+                        <div class="p-4 rounded-xl bg-[#22D3EE]/5 border-l-2 border-[#22D3EE] text-[#D1D5DB] text-[14px]">
+                            <strong class="text-[#22D3EE]">Strict Zero-Sale Guarantee:</strong> We do not sell, rent, monetize, or trade client or prospect personal information to any third parties or brokers under any circumstances.
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div id="section-4" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">04</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">Legal Basis and Consent</h2>
+                        </div>
+                        <div class="space-y-4 text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed">
+                            <p>
+                                We process personal data on established legal bases, including performance of contracts, legitimate business interests (such as responding to inquiries and maintaining studio infrastructure), and statutory legal obligations.
+                            </p>
+                            <p>
+                                Where applicable data protection laws require affirmative consent, we obtain it prior to processing. You may withdraw consent at any time, subject to legal and contractual obligations related to completed or ongoing service agreements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 5 -->
+                    <div id="section-5" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">05</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">Cookies and Similar Technologies</h2>
+                        </div>
+                        <div class="space-y-4 text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed">
+                            <p>
+                                Our website may use essential cookies strictly required for core functionality, asset rendering, and security integrity. 
+                            </p>
+                            <p>
+                                If analytical or performance measurement scripts are enabled in the future, non-essential cookies will be managed in compliance with applicable consent guidelines. You can manage or disable cookie preferences directly in your browser settings.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 6 -->
+                    <div id="section-6" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">06</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">Third-Party Services</h2>
+                        </div>
+                        <p class="text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed mb-4">
+                            We utilize verified infrastructure providers to run our studio and host software deliverables:
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[14px] text-[#A0A0A0] mb-4">
+                            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+                                <span class="text-white font-medium block mb-1">Hosting &amp; DNS</span>
+                                <span class="text-xs text-[#888888]">Edge delivery networks and secure cloud hosting providers.</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+                                <span class="text-white font-medium block mb-1">Email Systems</span>
+                                <span class="text-xs text-[#888888]">Encrypted enterprise communication platforms.</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+                                <span class="text-white font-medium block mb-1">Payment Processors</span>
+                                <span class="text-xs text-[#888888]">PCI-DSS compliant gateways for invoicing.</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+                                <span class="text-white font-medium block mb-1">Project Integrations</span>
+                                <span class="text-xs text-[#888888]">Third-party APIs agreed upon for custom client builds.</span>
+                            </div>
+                        </div>
+                        <p class="text-[13px] text-[#888888]">Each third-party provider operates under its respective privacy terms and regulatory frameworks.</p>
+                    </div>
+
+                    <!-- Section 7 -->
+                    <div id="section-7" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">07</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">Data Storage and Security</h2>
+                        </div>
+                        <div class="space-y-4 text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed">
+                            <p>
+                                We enforce technical and organizational safeguards to protect data from unauthorized access, loss, tampering, or disclosure. Standard measures include encrypted communication (HTTPS/TLS), restricted access controls, and sanitized repository environments.
+                            </p>
+                            <p>
+                                While no digital transmission is guaranteed to be invulnerable, we regularly assess our workflow and take immediate measures to address any detected security vulnerabilities.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 8 -->
+                    <div id="section-8" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">08</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">Data Retention</h2>
+                        </div>
+                        <p class="text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed">
+                            Personal data is retained only for as long as strictly necessary to fulfill the specific purposes outlined, including contract delivery, project warranty support, legal compliance, and tax records. Data no longer required is securely permanently deleted or irreversibly anonymized.
+                        </p>
+                    </div>
+
+                    <!-- Section 9 -->
+                    <div id="section-9" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">09</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">International Data Transfers</h2>
+                        </div>
+                        <p class="text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed">
+                            Because Kalambe Devs collaborates with international clients and relies on global cloud infrastructure, information may be stored or processed in jurisdictions outside your country of residence. All transfers are conducted in accordance with applicable legal protection mechanisms.
+                        </p>
+                    </div>
+
+                    <!-- Section 10 -->
+                    <div id="section-10" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">10</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">Your Privacy Rights</h2>
+                        </div>
+                        <p class="text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed mb-4">
+                            Depending on your jurisdiction, you maintain legal rights regarding your personal information:
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[14px] text-[#A0A0A0] mb-6">
+                            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+                                <strong class="text-white block mb-1">Right to Access</strong>
+                                <span>Request a copy of the personal information we hold about you.</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+                                <strong class="text-white block mb-1">Right to Rectification</strong>
+                                <span>Request correction of outdated or inaccurate data records.</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+                                <strong class="text-white block mb-1">Right to Erasure</strong>
+                                <span>Request permanent deletion where retention is no longer legally mandated.</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+                                <strong class="text-white block mb-1">Right to Restrict or Object</strong>
+                                <span>Object to processing based on specific legitimate grounds.</span>
+                            </div>
+                        </div>
+                        <p class="text-[13px] text-[#888888]">To exercise any of these rights, email us directly. We may verify identity before processing requests.</p>
+                    </div>
+
+                    <!-- Section 11 -->
+                    <div id="section-11" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">11</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">Children's Privacy</h2>
+                        </div>
+                        <p class="text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed">
+                            Our studio delivers commercial digital solutions intended for businesses and competent legal entities. We do not knowingly solicit or collect personal information from individuals under the age of 18. Any inadvertent data collected will be promptly purged upon notification.
+                        </p>
+                    </div>
+
+                    <!-- Section 12 -->
+                    <div id="section-12" class="bg-[#0d1117] border border-white/10 hover:border-white/20 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">12</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">Changes to This Privacy Policy</h2>
+                        </div>
+                        <p class="text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed">
+                            We may revise this Privacy Policy periodically to reflect changes in our operational workflows, services, or statutory obligations. Any updated iteration will be posted directly to this URL with a revised effective timestamp.
+                        </p>
+                    </div>
+
+                    <!-- Section 13 -->
+                    <div id="section-13" class="bg-[#0d1117] border border-white/10 hover:border-[#22D3EE]/30 rounded-[24px] p-6 sm:p-8 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-[#79EDFF] font-mono text-[13px] font-semibold tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">13</span>
+                            <h2 class="text-white text-[20px] sm:text-[24px] font-bold tracking-tight">Contact and Privacy Requests</h2>
+                        </div>
+                        <p class="text-[#A0A0A0] text-[15px] sm:text-[16px] font-light leading-relaxed mb-6">
+                            For any inquiries, requests to exercise statutory data rights, or clarification regarding this document, please reach out to Kalambe Devs:
+                        </p>
+                        
+                        <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/10 space-y-3 text-[14px]">
+                            <div class="flex items-center justify-between pb-3 border-b border-white/5">
+                                <span class="text-[#888888]">Operating Studio</span>
+                                <span class="text-white font-medium">Kalambe Devs</span>
+                            </div>
+                            <div class="flex items-center justify-between pb-3 border-b border-white/5">
+                                <span class="text-[#888888]">Official Email</span>
+                                <span class="text-[#22D3EE] font-mono">[BUSINESS EMAIL]</span>
+                            </div>
+                            <div class="flex items-center justify-between pb-3 border-b border-white/5">
+                                <span class="text-[#888888]">Studio Address</span>
+                                <span class="text-[#22D3EE] font-mono">[BUSINESS ADDRESS]</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[#888888]">Privacy Contact</span>
+                                <span class="text-[#22D3EE] font-mono">[PRIVACY CONTACT NAME OR DESIGNATED CONTACT]</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#030406] border-t border-white/5 pt-[60px] pb-[40px] px-6 md:px-12 lg:px-[30px]">
+        <div class="max-w-[1440px] mx-auto">
+            <!-- Top section: brand + columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mb-[50px] md:mb-[60px]">
+                <!-- Brand column (spans 4 on lg) -->
+                <div class="lg:col-span-4 flex flex-col">
+                    <a href="../index.html" class="flex items-center gap-3 mb-[16px] w-fit">
+                        <div class="w-[38px] h-[38px] bg-[#111827] rounded-lg border border-white/10 flex items-center justify-center">
+                            <span class="text-[#22D3EE] text-base font-bold">KD</span>
+                        </div>
+                        <span class="text-white font-bold text-[19px] tracking-tight">Kalambe Devs</span>
+                    </a>
+                    <p class="text-[#888888] text-[14px] leading-relaxed max-w-[320px] mb-4">
+                        An independent software development studio building digital products and technology solutions that solve real business problems.
+                    </p>
+                    <div class="flex items-center gap-2 text-[12px] text-[#666666]">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400/80"></span>
+                        <span>Available for select projects</span>
+                    </div>
+                </div>
+
+                <!-- 4 Navigation & Resource Columns (spans 8 on lg, 4 on tablet, 2 on mobile) -->
+                <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-6">
+                    <!-- Column 1: Company -->
+                    <div class="flex flex-col">
+                        <h3 class="text-white text-[13px] font-semibold uppercase tracking-widest mb-[20px]">Company</h3>
+                        <ul class="flex flex-col gap-[12px]">
+                            <li><a href="about.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">About Us</a></li>
+                            <li><a href="work.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Our Work</a></li>
+                            <li><a href="contact.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Services -->
+                    <div class="flex flex-col">
+                        <h3 class="text-white text-[13px] font-semibold uppercase tracking-widest mb-[20px]">Services</h3>
+                        <ul class="flex flex-col gap-[12px]">
+                            <li><a href="services.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Web Development</a></li>
+                            <li><a href="services.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Software Development</a></li>
+                            <li><a href="services.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Custom Solutions</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Resources -->
+                    <div class="flex flex-col">
+                        <h3 class="text-white text-[13px] font-semibold uppercase tracking-widest mb-[20px]">Resources</h3>
+                        <ul class="flex flex-col gap-[12px]">
+                            <li><a href="../index.html#faq" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">FAQs</a></li>
+                            <li><a href="terms-and-conditions.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Terms &amp; Conditions</a></li>
+                            <li><a href="privacy-policy.html" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Connect (In line with Company, Services, Resources) -->
+                    <div class="flex flex-col">
+                        <h3 class="text-white text-[13px] font-semibold uppercase tracking-widest mb-[20px]">Connect</h3>
+                        <ul class="flex flex-col gap-[12px]">
+                            <li><a href="#" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">LinkedIn</a></li>
+                            <li><a href="#" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Instagram</a></li>
+                            <li><a href="mailto:kalambedevs@gmail.com" class="text-[#888888] hover:text-[#79EDFF] transition-colors text-[14px]">Email Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="w-full h-[1px] bg-white/5 mb-[24px]"></div>
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-[14px]">
+                <span class="text-[#555555] text-[13px]">© 2026 Kalambe Devs. All rights reserved.</span>
+                <div class="flex items-center gap-[20px]">
+                    <a href="terms-and-conditions.html" class="text-[#555555] hover:text-[#888888] transition-colors text-[13px]">Terms &amp; Conditions</a>
+                    <a href="privacy-policy.html" class="text-[#555555] hover:text-[#888888] transition-colors text-[13px]">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
